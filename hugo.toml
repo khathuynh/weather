@@ -1,0 +1,44 @@
+baseURL = "https://hugo-theme-anubis2.netlify.app/"
+languageCode = "en-us"
+theme = 'typo'
+title = "Kitty corner of the internet"
+
+[taxonomies]
+tag = 'tags'
+
+
+[params]
+# Meta description
+description = "tbd"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'eink'
+hideHeader = false
+
+# Intro on main page
+homeIntroContent = """
+Weather forecasting for the soul <3. updated monthly.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Forecasts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = 'January 2006'
+
+# Breadcrumbs
+breadcrumbs = false
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
