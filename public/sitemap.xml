@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/sept/</loc>
+    <loc>https://hugo-theme-anubis2.netlify.app/posts/sept/</loc>
     <lastmod>2024-09-11T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://hugo-theme-anubis2.netlify.app/</loc>
     <lastmod>2024-09-11T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://hugo-theme-anubis2.netlify.app/posts/</loc>
     <lastmod>2024-09-11T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sugar-water/</loc>
+    <loc>https://hugo-theme-anubis2.netlify.app/posts/sugar-water/</loc>
     <lastmod>2024-08-24T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://hugo-theme-anubis2.netlify.app/tags/</loc>
   </url>
 </urlset>
