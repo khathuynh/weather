@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Kitty corner of the internet</title>
-    <link>https://hugo-theme-anubis2.netlify.app/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Kitty corner of the internet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Sep 2024 14:20:31 -0400</lastBuildDate>
-    <atom:link href="https://hugo-theme-anubis2.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dark academia</title>
-      <link>https://hugo-theme-anubis2.netlify.app/posts/sept/</link>
+      <link>http://localhost:1313/posts/sept/</link>
       <pubDate>Wed, 11 Sep 2024 14:20:31 -0400</pubDate>
-      <guid>https://hugo-theme-anubis2.netlify.app/posts/sept/</guid>
+      <guid>http://localhost:1313/posts/sept/</guid>
       <description>August did send its warning to the northeast- that week-long false break from humidity and stillness. (a contrapoint: in Minnesota, there&amp;rsquo;s two weeks of may mud before spring starts.) signs totally ignored. the pseudo season deftly came and left. along with, the wind blew away my sense of stopped time.&#xA;At least, the weight of sunset falls square on the shoulders now. as the night bites back, rightly blue to righteous black, the summer is weathering down.</description>
     </item>
     <item>
       <title>Sweet like sugar water</title>
-      <link>https://hugo-theme-anubis2.netlify.app/posts/sugar-water/</link>
+      <link>http://localhost:1313/posts/sugar-water/</link>
       <pubDate>Sat, 24 Aug 2024 14:20:31 -0400</pubDate>
-      <guid>https://hugo-theme-anubis2.netlify.app/posts/sugar-water/</guid>
+      <guid>http://localhost:1313/posts/sugar-water/</guid>
       <description>Here I am sitting in a forest inside a botanic garden, where everything is in bloom. The last of summer lies ahead. Today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water. Sugar water is Maude Latour&amp;rsquo;s debut album. It occurs to me that late August captures the precise seasonality of the album. And the saturation of it too, or rather its maximalist treatment toward life energy.</description>
     </item>
   </channel>
