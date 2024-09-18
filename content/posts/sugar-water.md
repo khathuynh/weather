@@ -4,12 +4,32 @@ date = 2024-08-24T14:20:31-04:00
 draft = false
 readTime = true
 +++
-Here I am sitting in a forest inside a botanic garden,  where everything is in bloom. The last of summer lies ahead. Today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water. Sugar water is Maude Latour's debut album. It occurs to me that late August captures the precise seasonality of the album. And the saturation of it too, or rather its maximalist treatment toward life energy. The language of sugar water is no doubt of cosmic proportions, marking the end of the summer as the end of the world.
+ <base target="_blank">
+I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water. 
 
-'I had a vision of the north star,' is how Cosmic Superstar Girl opens. Fatalistic. Kaleidescopic. These are the ways I read the album and cement it in my brain. There are moments throughout it where she tells me that I'm already dead. So I'm dying, I'm dead, and I'm listening to this song? In a whirlpool, then inside my own head, as Maude implores, "I was hoping, you could save me?" But our minds are sinking ships amongst waves and pathways and scripture and the beds of gleaming flowers. Then before I know it track 12 becomes track 1 reincarnate. So we bloom.
+*Sugar water* is Maude Latour's debut album. she’s airy, pop rising, floating light among mere mortals. and then it occurs to me that late August captures the precise seasonality of the album. well, i think the language of the album is this. *sugar water* marks the end of the summer as the end of the world.
 
-Bloom is the last song on the tracklist. It takes the notion of containing multitudes from trite to downright entracement. Living adjacent to Buddhist thought and heritage, the effect of listening is circular: 'you are a party, you are a wave, you are a magical skateboard rider, you are a rave.' The song is ridiculous although it's not. In death, love is displaced, as matter is transformed and never created nor destroyed. Whether it is the death of a person, relationship, or a time. The love that existed then persists in a new form, and then... you bloom. In the last segment, Maude puts forth this call to action.
+`'I had a vision of the north star.'`
 
-For me, the album is as elegant as perfect math found in nature. Like the spirals of golden ratios and the shape of tree leaves, repeating themselves on fractal scales. It's not what I expect of a debut pop record but I'm embracing it. Tough cookie critics have, in the past, challenged Maude's use of a Lorde-like style of singing and lyric writing that sometimes veers closer to clumsiness than its intended saturation ('cause im slipping through the cracks of the floorboards to the apartment below us, yeah'). With her latest entry, she moves beyond these borders and into a league of her own. Some call it existential pop, which I find fitting. Or poptismism. Call a spade a spade, sure, but what I am most drawn to is the experience of song as poems and letters in their rawest honesty. Maude delivers medium-rare in an industry that ocassionally hits well-done in its conventions. So I'm basking in Sugar Water, drenched in its passage of love and time transfigured. (put above - I'm able to feel this because these songs achieve an intimate indulgence, as if I'm penpaling with a stranger I paradoxically trust with my life. Because she's laying it all out to bare as the hope illuminates from pain. )
+The starting line of a song (track 9). i can’t help but feel a fever for Perseid’s meteor showers, how my friends used to go to this hill in arlington in August to watch the stars peel off the sky, shooting fire, don’t blink and you’ll miss it. and i do miss it. the north star is from a ditty called cosmic superstar girl om *sugar water*'s back half.
 
- Reflecting on her catalog of EPs, Maude insists that the challenge of curating a longer body of work is a rewarding one. Cohesion toward a vision is certainly a throughline in my experience of the album. That vision is something of a divinity. She divines the nature of love and loss- 'the difference is in the letters and the drugs you take.'
+`'You are a party, you are a wave, you are a magical skateboard rider, you are a rave.'`
+
+Bloom is the last song (track 12). from a buddhist spiritualist standpoint, the effect of listening is circular, party to rave. The song is ridiculous although it's not. for everything must run its course. in death, love is displaced, as matter is transformed and never created nor destroyed. the love that existed then persists in a new form, and then... you bloom. in the last segment of the project, Maude puts forth this call to action. 
+
+Of course there are moments throughout listening where she's telling me i'm already dead. so i'm dying, i'm dead, and i’m entering the whirpool (track 4), going down the drain, losening my grip. maude is having me skate rock bottom. 
+
+But then again, our minds are sinking ships amongst waves and pathways and scripture and the beds of gleaming flowers and isn't that as crazy as seeing infinite roses on ketamine (track 11). my brain breaks this down: *sugar water* is a code for late august, saturation. maximal life energy bursting its container. she follows through on her concepts, to the effect that the throughline is kaleidoscopic, fatal. 
+
+`'You are the last dance, and baby you're god'`
+
+She's praising nature's perfect math and beauty everywhere you look. inside the botanic garden and everything blooms. i feel enveloped, sensing the spirals of golden ratios embedded in the shape of tree leaves. repeating themselves on fractal scales. resembling a pattern that disappears as fast as it came. so sweet, that even pain illuminates. she's telling me i'm high on sugar water: it's not what i expect of a debut pop record but i will embrace it. i'm sure August has found its soundwave.
+
+
+ *( Tough cookie critics have, in the past, challenged Maude's use of a Lorde-like style of singing and lyric writing that can veer closer to clumsiness than specifity (example: 'cause im slipping through the cracks of the floorboards to the apartment below us, yeah'). with this latest entry, does she outgrow her borders and into a league of her own? she claims existential pop, which i find fitting. it's fitting that her poptimism is charting in August, a project of hundreds of songs thoughtfully filtered down to 12. )*
+
+ Songs:
+
+ - Time to pretend by mgmt
+ - Bloom by maude latour
+ - [Midnight city](https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt?si=72d130b16a814407) by m83

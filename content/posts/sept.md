@@ -12,9 +12,11 @@ The seasonal clock insists that i soon be employed (be stable before the darknes
 
 Tough! this is dark academia allright! a few weeks then to link my very physical anxiety to its source. surprise, surprise. it’s the job search… and i’m cursing my bias toward intuition: the body knows first, when the mind knows last.
 
-“how I only realize what
+`'How I only realize what
 I want at the moment I attain it,
-my mind the final part of me to know.” (Kate --, I Meant It Once, 71)
+my mind the final part of me to know.'`
+
+(Maggie Millner, *Couplets*, 7)
 
 Studying is hard. solving these problems require you think like a computer, tracking the minutiae of events in chronological order (iterations) in enclosed input/output systems. in order to determine an algorithm. but my brain does not process things like this. i do things sans structure at the outset, and rarely sequentially, whether its writing a book or sketching out a new project. broad stroke first. the order comes later.
 
