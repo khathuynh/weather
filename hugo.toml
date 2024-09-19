@@ -37,6 +37,9 @@ breadcrumbs = false
 [[params.menu]]
 name = "home"
 url = "/"
+[[params.menu]]
+name = "about"
+url = "/about"
 
 # Syntax highligth on code blocks
 [markup]

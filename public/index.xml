@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Kitty corner of the internet</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Kitty corner of the internet</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Sep 2024 14:20:31 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dark academia</title>
+      <link>http://localhost:1313/posts/dark-academia/</link>
+      <pubDate>Wed, 11 Sep 2024 14:20:31 -0400</pubDate>
+      <guid>http://localhost:1313/posts/dark-academia/</guid>
+      <description>August did send its warning to the northeast- that week-long false break from humidity and stillness. along with, the wind blew away my sense of stopped time. at least, the weight of sunset falls square on the shoulders now. as the night bites back, rightly blue to righteous black, the summer is weathering down. and im so much more alert for it. i fear losing light never hurt so good&amp;hellip;.</description>
+    </item>
+    <item>
+      <title>Sweet like sugar water</title>
+      <link>http://localhost:1313/posts/sugar-water/</link>
+      <pubDate>Sat, 24 Aug 2024 14:20:31 -0400</pubDate>
+      <guid>http://localhost:1313/posts/sugar-water/</guid>
+      <description>I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water.  and then it occurs to me that late August captures the precise seasonality of the album (Maude Latours debut Sugar Water)&amp;hellip;.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>I am a cat on the internet.</description>
+    </item>
+  </channel>
+</rss>
