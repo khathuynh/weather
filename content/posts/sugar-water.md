@@ -3,7 +3,9 @@ title = 'Sweet like sugar water'
 date = 2024-08-24T14:20:31-04:00
 draft = false
 readTime = true
+summary = 'I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water.  and then it occurs to me that late August captures the precise seasonality of the album (Maude Latours debut Sugar Water).'
 +++
+
 I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water. 
 
 *Sugar water* is Maude Latour's debut album. she’s airy, pop rising, floating light among mere mortals. and then it occurs to me that late August captures the precise seasonality of the album. well, i think the language of the album is this. *sugar water* marks the end of the summer as the end of the world.

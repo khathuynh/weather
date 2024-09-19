@@ -3,7 +3,9 @@ title = 'Dark academia'
 date = 2024-09-11T14:20:31-04:00
 draft = false
 readTime = true
+summary = 'August did send its warning to the northeast- that week-long false break from humidity and stillness. along with, the wind blew away my sense of stopped time. at least, the weight of sunset falls square on the shoulders now. as the night bites back, rightly blue to righteous black, the summer is weathering down. and im so much more alert for it. i fear losing light never hurt so good.'
 +++
+
 August did send its warning to the northeast- that week-long false break from humidity and stillness. (a contrapoint: in Minnesota, there's two weeks of may mud before spring starts.) signs totally ignored. the pseudo season deftly came and left. along with, the wind blew away my sense of stopped time.
 
 At least, the weight of sunset falls square on the shoulders now. as the night bites back, rightly blue to righteous black, the summer is weathering down. and i'm so much more alert for it. i fear losing light never hurt so good. a spell coating the air. the darkest of academic tunneling. i adjust my focus; i'm studious. i'm pent up in a vision.
