@@ -6,8 +6,15 @@
     <description>Recent content in Home on Kitty corner of the internet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Sep 2024 14:20:31 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2024 12:20:31 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The substance</title>
+      <link>http://localhost:1313/posts/the-substance/</link>
+      <pubDate>Thu, 31 Oct 2024 12:20:31 -0400</pubDate>
+      <guid>http://localhost:1313/posts/the-substance/</guid>
+      <description>Trying not to think about being in a body- an affair i’ve been at for awhile. October seems to agree, with its ghouls and guts and flesh, that being in a being in a body is horrifying. And then i watched &lt;em&gt;The Substance (2024)&lt;/em&gt;.  there’s plenty needles, repeated injection, surgical stitchery, mukbang-style slobbering over prawns&amp;hellip;.</description>
+    </item>
     <item>
       <title>Dark academia</title>
       <link>http://localhost:1313/posts/dark-academia/</link>
@@ -27,7 +34,14 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>I am a cat on the internet.</description>
+      <description>I am a cat on the internet. You can reach me at kha.t.huynh@gmail.com.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/book/</guid>
+      <description>I&amp;rsquo;ve been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Spring 2025.&#xA;The story follows two friends meeting back in their hometown, taking place over 24 hours. Their friendship is fraught. It is intergenerational. It is a first love. Above all, it is rooted in the built environment.&#xA;The throughline is tightly wound to spirit of place: reverent appreciation for literature/film tradition, schools of thought, and cultural production tied to a geographic or regional specificity.</description>
     </item>
   </channel>
 </rss>
