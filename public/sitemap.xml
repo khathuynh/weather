@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.khatnaps.net/posts/brooklyn-baby/</loc>
+    <lastmod>2025-01-11T14:20:31-04:00</lastmod>
+  </url><url>
+    <loc>https://www.khatnaps.net/</loc>
+    <lastmod>2025-01-11T14:20:31-04:00</lastmod>
+  </url><url>
+    <loc>https://www.khatnaps.net/posts/</loc>
+    <lastmod>2025-01-11T14:20:31-04:00</lastmod>
+  </url><url>
+    <loc>https://www.khatnaps.net/posts/the-substance/</loc>
     <lastmod>2024-10-31T12:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-10-31T12:20:31-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/the-substance/</loc>
-    <lastmod>2024-10-31T12:20:31-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/dark-academia/</loc>
+    <loc>https://www.khatnaps.net/posts/dark-academia/</loc>
     <lastmod>2024-09-11T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sugar-water/</loc>
+    <loc>https://www.khatnaps.net/posts/sugar-water/</loc>
     <lastmod>2024-08-24T14:20:31-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.khatnaps.net/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/book/</loc>
+    <loc>https://www.khatnaps.net/book/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.khatnaps.net/tags/</loc>
   </url>
 </urlset>

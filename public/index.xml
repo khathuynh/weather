@@ -2,46 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Kitty corner of the internet</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.khatnaps.net/</link>
     <description>Recent content in Home on Kitty corner of the internet</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2024 12:20:31 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2025 14:20:31 -0400</lastBuildDate>
+    <atom:link href="https://www.khatnaps.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brooklyn baby</title>
+      <link>https://www.khatnaps.net/posts/brooklyn-baby/</link>
+      <pubDate>Sat, 11 Jan 2025 14:20:31 -0400</pubDate>
+      <guid>https://www.khatnaps.net/posts/brooklyn-baby/</guid>
+      <description>And so the best of 2024 lingers into the new year. &lt;em&gt;Anora (2024)&lt;/em&gt; leaves me with an intangible feeling, one that strikes an emotional core like no other feminist-adjacent media has done in recent memory. i feel something fundamentally true to the feminine condition in Mikey Madisons performance as Anora. and i cant unfeel it, despite the months that go by since seeing this movie&amp;hellip;</description>
+    </item>
     <item>
       <title>The substance</title>
-      <link>http://localhost:1313/posts/the-substance/</link>
+      <link>https://www.khatnaps.net/posts/the-substance/</link>
       <pubDate>Thu, 31 Oct 2024 12:20:31 -0400</pubDate>
-      <guid>http://localhost:1313/posts/the-substance/</guid>
+      <guid>https://www.khatnaps.net/posts/the-substance/</guid>
       <description>Trying not to think about being in a body- an affair i’ve been at for awhile. October seems to agree, with its ghouls and guts and flesh, that being in a being in a body is horrifying. And then i watched &lt;em&gt;The Substance (2024)&lt;/em&gt;.  there’s plenty needles, repeated injection, surgical stitchery, mukbang-style slobbering over prawns&amp;hellip;.</description>
     </item>
     <item>
       <title>Dark academia</title>
-      <link>http://localhost:1313/posts/dark-academia/</link>
+      <link>https://www.khatnaps.net/posts/dark-academia/</link>
       <pubDate>Wed, 11 Sep 2024 14:20:31 -0400</pubDate>
-      <guid>http://localhost:1313/posts/dark-academia/</guid>
+      <guid>https://www.khatnaps.net/posts/dark-academia/</guid>
       <description>August did send its warning to the northeast- that week-long false break from humidity and stillness. along with, the wind blew away my sense of stopped time. at least, the weight of sunset falls square on the shoulders now. as the night bites back, rightly blue to righteous black, the summer is weathering down. and im so much more alert for it. i fear losing light never hurt so good&amp;hellip;.</description>
     </item>
     <item>
       <title>Sweet like sugar water</title>
-      <link>http://localhost:1313/posts/sugar-water/</link>
+      <link>https://www.khatnaps.net/posts/sugar-water/</link>
       <pubDate>Sat, 24 Aug 2024 14:20:31 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sugar-water/</guid>
+      <guid>https://www.khatnaps.net/posts/sugar-water/</guid>
       <description>I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water.  and then it occurs to me that late August captures the precise seasonality of the album (Maude Latours debut Sugar Water)&amp;hellip;.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://www.khatnaps.net/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://www.khatnaps.net/about/</guid>
       <description>I am a cat on the internet. You can reach me at kha.t.huynh@gmail.com.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/book/</link>
+      <link>https://www.khatnaps.net/book/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/book/</guid>
-      <description>I&amp;rsquo;ve been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Spring 2025.&#xA;The story follows two friends meeting back in their hometown, taking place over 24 hours. Their friendship is fraught. It is intergenerational. It is a first love. Above all, it is rooted in the built environment.&#xA;The throughline is tightly wound to spirit of place: reverent appreciation for literature/film tradition, schools of thought, and cultural production tied to a geographic or regional specificity.</description>
+      <guid>https://www.khatnaps.net/book/</guid>
+      <description>I&amp;rsquo;ve been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Summer/Fall 2025.&#xA;The story follows two friends reconnecting in their hometown, taking place over 24 hours. Their friendship is fraught. It is intergenerational. It is a first love. Above all, it is rooted in the built environment.&#xA;The throughline is tightly wound to spirit of place: reverent appreciation for literature/film tradition, schools of thought, and cultural production tied to a geographic or regional specificity.</description>
     </item>
   </channel>
 </rss>

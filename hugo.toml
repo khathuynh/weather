@@ -18,7 +18,7 @@ hideHeader = false
 
 # Intro on main page
 homeIntroContent = """
-Weather forecasting for the soul <3. once a month.
+Weather forecasting for the soul <3.
 """
 
 # Collection to display on home

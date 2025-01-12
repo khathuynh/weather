@@ -1,4 +1,4 @@
-**I've been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Spring 2025.**
+**I've been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Summer/Fall 2025.**
 
 The story follows two friends reconnecting in their hometown, taking place over 24 hours. Their friendship is fraught. It is intergenerational. It is a first love. Above all, it is rooted in the built environment.
 
