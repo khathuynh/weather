@@ -1,15 +1,24 @@
-**I've been working on a novel over the past year (magical realism, ecological fiction) with aims to publish in Summer/Fall 2025.**
+**I’ve been working on a novella (magical realism, science and literary fiction) with aims to publish in Summer/Fall 2025.**
 
-The story follows two friends reconnecting in their hometown, taking place over 24 hours. Their friendship is fraught. It is intergenerational. It is a first love. Above all, it is rooted in the built environment.
+...After years of radio silence, two friends reconnect in their hometown of **Boston**. In just 24 hours, they unearth spirits from old stomping grounds, setting forth a timeline of biblical proportion. One friend is human. The other will forever and always be a moth.
 
-The throughline is tightly wound to **spirit of place**: reverent appreciation for literature/film tradition, schools of thought, and cultural production tied to a geographic or regional specificity.
+Their friendship is fraught to say the least. It's a supernatural slumber party every day.
 
-Locality: Our two friends roam Sommerford-Camberville; almost all of the book’s events take place there. Their fictional journey is concretely grounded in the historic legacy of **Boston’s streetcar neighborhoods**.
+The human is a 28-year-old who comes to Nostalgia as a heartsick romantic comes to love. She has spent the greater part of adulthood outrunning her failed friendships and unpanned plans for the future– until now. Moth, a childhood friend who’s at least three centuries old, is sick of the self-pity and whisks her away on a whimsy-walk. On a dreary wintry Sunday, they'll walk twelve miles down memory lane weaving through Sommerford-Camberville.
 
-The book hopes to inspire readers to more deeply identify with their personal history and hometown communities across the US. A belief central to the book universe is that there are more stories to be told… beyond those set squarely in the media powerhouses of NYC and LA, in the uninspired critiques of a homogenized suburbia, and in the declension narrative of gentrification.
+As the day fades into an all-nighter, the human experiences Nostalgia as a spiritual possession. It is one she may or may not be able to exorcise. It is one that threatens the very fabric of her religion–friendship?–with Moth. And so she must decide between two paths: to fully possess the past of memory, or to shed the images of the future she once held, leaving everyone she knows behind and dead. But not before solving the mysteries of how Amelia Earhart really died, and how *Lymantria dispar* made it out alive of a Harvard murder.
 
-On a thematic level, the book considers the seemingly inevitable way that time transforms the world until it is unrecognizable to the people who have endured it. Worlds fading, one into the next. The friends experience nostalgia as a spiritual possession: a desire to possess the past of memory, as well as the images of the future they had previously held.
- 
-In the end, the friends question what is meant by a borrowed life, and the natural and unnatural forces of dispossession. They muse over ownership of past selves among friendship. Finding your place is important. Why does it feel like for half our lives we search for this feeling, and by the end long to see it how it was before? But the coming of ages can't be stopped; it'll come and go just the same. 
+---
+
+What does the book believe in? A *spirit of place*. That there are more stories to be told… beyond those set squarely in the media powerhouses of NYC and LA, in the uninspired critiques of suburbia, and in the declension narrative of gentrification. 
+
+In the end, the friends question what is meant by a borrowed life forged from the forces of dispossession. Finding your place is important. Why does it feel like for half our lives we search for this feeling, and by the end long to see it how it was before? But the coming of ages can’t be stopped; it’ll come and go just the same.
 
 **The neighborhood is always changing.**
+
+---
+
+Comparable titles
+1. *Gone Like Yesterday* by Janelle Williams uses the symbolic power of the 'gypsy' moth to elevate society's discarded. 
+2. *A Tale for the Time Being* by Ruth Ozeki employs a Buddhist treatment of time as collapsible, cyclical, absent. 
+3. *The Book of Goose* by Yiyun Li and *The Myth of You and Me* by Leah Stewart paint a fragile portrait of a first true friendship.

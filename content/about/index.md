@@ -1,6 +1,8 @@
-I am a cat on the internet. You can reach me at kha.t.huynh@gmail.com.
-<!-- when i am not making muffins, or napping, i respond to the weather system i live inside.  -->
+I am a cat on the internet :). you can reach me at kha.t.huynh@gmail.com.
 
-<!-- this is my platform to forecast weather that has mostly already happened. but. time to a cat is no real matter- for i have all the time in the world! and, to boot, a sixth sense for the mystery of mother nature. -->
+I am a cat that will never learn to drive because i was born and raised in Boston. i studied urban ecology, public transit, and clam chowdery at Carleton College's American Studies department. i am seeking representation for my debut novella which explores the current critiques of suburbia and gentrification through ecological motifs. the sorts of invasive species like the moth effect (formerly known as butterfly effect), the tree of heaven, and cats with souls.
+
+When i am not making muffins, napping, or being wicked, i am a cat on the internet. i am checking my emails, sunlit on the windowsill.
+<!-- 
 
 <!-- ![](kathy-yawn.jpg#small) -->
