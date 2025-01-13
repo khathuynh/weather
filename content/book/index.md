@@ -6,7 +6,7 @@ Their friendship is fraught to say the least. It's a supernatural slumber party 
 
 The human is a 28-year-old who comes to Nostalgia as a heartsick romantic comes to love. She has spent the greater part of adulthood outrunning her failed friendships and unpanned plans for the future– until now. Moth, a childhood friend who’s at least three centuries old, is sick of the self-pity and whisks her away on a whimsy-walk. On a dreary wintry Sunday, they'll walk twelve miles down memory lane weaving through Sommerford-Camberville.
 
-As the day fades into an all-nighter, the human experiences Nostalgia as a spiritual possession. It is one she may or may not be able to exorcise. It is one that threatens the very fabric of her religion–friendship?–with Moth. And so she must decide between two paths: to fully possess the past of memory, or to shed the images of the future she once held, leaving everyone she knows behind and dead. But not before solving the mysteries of how Amelia Earhart really died, and how *Lymantria dispar* made it out of Harvard junior year alive.
+As the day fades into an all-nighter, the human experiences Nostalgia as a spiritual possession. It is one she may or may not be able to exorcise. It is one that threatens the very fabric of her religion–friendship?–with Moth. And so she must decide between two paths at Park St. station: to fully possess the past of memory, or to shed the images of the future she once held, leaving everyone she knows behind and dead. But not before solving the mysteries of how Amelia Earhart really died, and how *Lymantria dispar* made it out of Harvard junior year alive.
 
 ---
 
