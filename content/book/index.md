@@ -10,7 +10,7 @@ As the day fades into an all-nighter, the human experiences Nostalgia as a spiri
 
 ---
 
-What does the book believe in? A *spirit of place*. That there are more stories to be told… beyond those set squarely in the media powerhouses of NYC and LA, in the uninspired critiques of suburbia, and in the declension narrative of gentrification. 
+What does the book believe in? A **spirit of place**. That there are more stories to be told… beyond those set squarely in the media powerhouses of NYC and LA, in the uninspired critiques of suburbia, and in the declension narrative of gentrification. 
 
 In the end, the friends question what is meant by a borrowed life forged from the forces of dispossession. Finding your place is important. Why does it feel like for half our lives we search for this feeling, and by the end long to see it how it was before? But the coming of ages can’t be stopped; it’ll come and go just the same.
 
