@@ -1,8 +1,10 @@
-I am a cat on the internet :). you can reach me at kha.t.huynh@gmail.com.
+Kha is a khat on the internet :). You can reach her at kha.t.huynh@gmail.com.
 
-I am a cat that will never learn to drive because i was born and raised in Boston. i studied urban ecology, public transit, and clam chowdery at Carleton College's American Studies department. i am seeking representation for my debut novella which explores the current critiques of suburbia and gentrification through ecological motifs. the sorts of invasive species like the moth effect (formerly known as butterfly effect), the tree of heaven, and cats with souls.
+Kha is a city kitty based between Brooklyn and Boston. Born in Boston, she never had to learn to drive. Now she is a professional walker (khatwalk!). She studied urban ecology, public transit, and clam chowdery at Carleton College's American Studies department. She mostly writes about long strolls with friends.
 
-When i am not making muffins, napping, or being wicked, i am a cat on the internet. i am checking my emails, sunlit on the windowsill.
+She is seeking representation for her magic realism novella: about two estranged friends on a twenty-four hour walk together.
+
+When she is not making muffins, napping, or being wicked, she is checking her emails, sunlit on a windowsill.
 <!-- 
 
 <!-- ![](kathy-yawn.jpg#small) -->
