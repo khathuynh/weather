@@ -43,6 +43,9 @@ url = "/about"
 [[params.menu]]
 name = "book"
 url = "/book"
+[[params.menu]]
+name = "map"
+url = "/map"
 
 
 # Syntax highligth on code blocks
