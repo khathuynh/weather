@@ -2,71 +2,86 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>D3 + d3-tile Boston Map</title>
+  <title>Boston Metro Map</title>
   <style>
     body { margin: 0; }
-    svg { display: block; width: 100vw; height: 100vh; filter: hue-rotate(45deg);}
     image { image-rendering: crisp-edges; }
+    #map {height: 600px;}
+    /* #map .leaflet-tile-pane {
+    filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
+    } */
+    .watercolor-layer {  filter: hue-rotate(50deg); }
+    .lite-neighborhood-layer { mix-blend-mode: multiply; } 
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <script src="https://cdn.osmbuildings.org/classic/0.2.2b/OSMBuildings-Leaflet.js"></script>
+  <link rel="stylesheet" href="utils/L.Control.BetterScale.css">
+  <script src="utils/L.Control.BetterScale.js"></script>
+
 </head>
+<!-- filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2) -->
+
 <body>
-
-  <!-- filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2) -->
-
 <div id="map"></div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-tile@1"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
-
 <script>
-  const width = window.innerWidth, 
-  height = 600,
-  centerLat = 42.3601,
-  centerLon = -71.0589,
-  zoomLevel = 13;
+  var map = L.map('map').setView([42.3601, -71.0589], 12);
 
-  // Generate svg canvas
-  const svg = d3.select("#map")
-  .append("svg")
-  .attr("viewBox", `0 0 ${width} ${height}`)
-  .attr("width", width)
-  .attr("height", height);
+  // Base layer
+  var watercolorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.png', {
+    maxZoom: 16,
+    minZoom: 11,
+    opacity: .8,
+    className: 'watercolor-layer',
+    attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+  }).addTo(map);
 
-  // Base projection at default zoom level
-  const projection =
-      d3.geoMercator()
-        .center([centerLon, centerLat])
-        .scale(Math.pow(2, zoomLevel + 8) / (2 * Math.PI))
-        .translate([width / 2, height / 2]);
-  
-  // Tile generator      
-  const tile = 
-      d3.tile()
-        .size([width, height])
-        .scale(projection.scale() * 2 * Math.PI)
-        .translate(projection([0, 0]));
+  // Overlay layers
+  var liteNeighborhoodLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png', {
+    maxZoom: 16,
+    minZoom: 11,
+    opacity: 1,
+    className: 'lite-neighborhood-layer',
+    attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+  }).addTo(map);
 
-  function url(x,y,z) {
-    return `https://tiles.stadiamaps.com/tiles/stamen_toner_lite/${z}/${x}/${y}${devicePixelRatio > 1 ? "@2x" : ""}.png`
+  var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
+  map.removeLayer(osm);
+
+  // Configure layer controls, scale
+  var baseMaps = {
+    'Natural geography': watercolorLayer
   }
+  var overlayMaps = {
+    'Neighborhoods': liteNeighborhoodLayer,
+    '2.5D buildings': osm
+  }
+  L.control.layers(baseMaps, overlayMaps)
+    .addTo(map);
+  L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
+ 
+  // Annotation layers
+  var circle = L.circle([42.41, -71.10], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.8,
+    radius: 250
+  }).addTo(map);
 
-  const tiles = tile();
+  // var popup = L.popup()
+  //   .setLatLng([42.41, -71.10])
+  //   .setContent("I am a standalone popup.")
+  //   .openOn(map);
 
-  // Bind tiles to image elements
-  svg.selectAll("image")
-    .data(tiles)
-    .join("image")
-    .attr("xlink:href", ([x, y, z]) => url(x, y, z))
-    .attr("x", ([x]) =>
-      Math.round((x + tiles.translate[0]) * tiles.scale)
-    )
-    .attr("y", ([, y]) =>
-      Math.round((y + tiles.translate[1]) * tiles.scale)
-    )
-    .attr("width", tiles.scale)
-    .attr("height", tiles.scale);
+  function isMobile() {
+    // return navigator.userAgentData.mobile;
+    return window.matchMedia("only screen and (max-width: 768px)").matches;
+  };
 </script>
-
 </body>
 </html>
