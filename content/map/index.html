@@ -13,6 +13,7 @@
     .watercolor-layer {  filter: hue-rotate(50deg); }
     .lite-neighborhood-layer { mix-blend-mode: multiply; } 
   </style>
+  <link rel="stylesheet" href="utils/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin=""/>
@@ -22,66 +23,13 @@
   <script src="https://cdn.osmbuildings.org/classic/0.2.2b/OSMBuildings-Leaflet.js"></script>
   <link rel="stylesheet" href="utils/L.Control.BetterScale.css">
   <script src="utils/L.Control.BetterScale.js"></script>
+  <script src="utils/displayMap.js" type="module"></script> 
+  <script src="data/mbtaNode.js"></script>
+  <script src="data/mbtaArc.js"></script>
 
 </head>
-<!-- filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2) -->
 
 <body>
 <div id="map"></div>
-
-<script>
-  var map = L.map('map').setView([42.3601, -71.0589], 12);
-
-  // Base layer
-  var watercolorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.png', {
-    maxZoom: 16,
-    minZoom: 11,
-    opacity: .8,
-    className: 'watercolor-layer',
-    attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  // Overlay layers
-  var liteNeighborhoodLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png', {
-    maxZoom: 16,
-    minZoom: 11,
-    opacity: 1,
-    className: 'lite-neighborhood-layer',
-    attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
-  map.removeLayer(osm);
-
-  // Configure layer controls, scale
-  var baseMaps = {
-    'Natural geography': watercolorLayer
-  }
-  var overlayMaps = {
-    'Neighborhoods': liteNeighborhoodLayer,
-    '2.5D buildings': osm
-  }
-  L.control.layers(baseMaps, overlayMaps)
-    .addTo(map);
-  L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
- 
-  // Annotation layers
-  var circle = L.circle([42.41, -71.10], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.8,
-    radius: 250
-  }).addTo(map);
-
-  // var popup = L.popup()
-  //   .setLatLng([42.41, -71.10])
-  //   .setContent("I am a standalone popup.")
-  //   .openOn(map);
-
-  function isMobile() {
-    // return navigator.userAgentData.mobile;
-    return window.matchMedia("only screen and (max-width: 768px)").matches;
-  };
-</script>
 </body>
 </html>
