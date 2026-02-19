@@ -1,9 +1,14 @@
 var map = L.map('map').setView([42.3601, -71.0595], 12);
+map.setMaxBounds([
+    [42.44631602002316, -70.91989523904654],
+    [42.187134871022494, -71.20475356314114]
+])
 
 // Base layer
 var watercolorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.png', {
 maxZoom: 16,
 minZoom: 11,
+maxNativeZoom: 14,
 opacity: .7,
 className: 'watercolor-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
@@ -13,6 +18,7 @@ attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Ma
 var liteCitiesLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png', {
 maxZoom: 16,
 minZoom: 11,
+maxNativeZoom: 15,
 opacity: 1,
 className: 'lite-neighborhood-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
