@@ -22,6 +22,7 @@ var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fc
 map.removeLayer(osm);
 
 var mbtaLinesLayer = L.geoJSON(mbtaArcsJson, {
+    interactive: false,
     style: function(feature) {
         return { 
             weight: 7,
@@ -34,30 +35,61 @@ var mbtaLinesLayer = L.geoJSON(mbtaArcsJson, {
     }
 }).addTo(map);
 
-var mbtaStationsLayer = L.geoJSON(mbtaNodesJson, {
-    // square?
+var mbtaStationsNoDowntownLayer = L.geoJSON(mbtaNodesJson, {
+    interactive: false,
     pointToLayer: function(point, latlng) {
-        var circle = L.circle(latlng, {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.85,
-            radius: 50
+        var text = L.divIcon({
+        className: 'station-names',
+        html: `<p>${point.properties.STATION}</p>`,
+        iconSize: [100, 20],
+        iconAnchor: [0, 0]
         });
-        circle.bindTooltip(`${point.properties.STATION}`, {
-            permanent: true,
-            className: "my-label", // Optional: for custom CSS styling
-            direction: 'center', // Centers the label within the circle
-            offset: [0, 0] // Optional: adjust position
-        }).openTooltip();
-        return circle;
+        var label = L.marker([latlng.lat, latlng.lng], {icon: text});
+
+        var circle = L.circle(latlng, {
+        stroke: false,
+        color: 'rgba(0, 0, 0, 0.48)',
+        fillColor: 'rgb(0, 0, 0)',
+        fillOpacity: .7,
+        radius: 60
+        });
+        
+        return L.featureGroup([label, circle]);
     },
     filter: function (feature) {
-        return filterSilver(feature);
+        return filterSilver(feature) && filterGreenLineWest(feature) && filterDowntown(feature);
     }
 });
 
-// MBTA layer group
-// var mbtaLayerGroup = L.layerGroup(mbtaLinesLayer, mbtaStationsLayer);
+var mbtaStationsDowntownOnlyLayer = L.geoJSON(mbtaNodesJson, {
+    // square?
+    interactive: false,
+    pointToLayer: function(point, latlng) {
+        var text = L.divIcon({
+        className: 'station-names',
+        html: `<p>${point.properties.STATION}</p>`,
+        iconSize: [100, 20],
+        iconAnchor: [0, 0]
+        });
+        var label = L.marker([latlng.lat, latlng.lng], {icon: text});
+
+        var circle = L.circle(latlng, {
+        stroke: false,
+        color: 'rgba(0, 0, 0, 0.48)',
+        fillColor: 'rgb(0, 0, 0)',
+        fillOpacity: .7,
+        radius: 60
+        });
+        
+        return L.featureGroup([label, circle]);
+    },
+    filter: function (feature) {
+        return filterSilver(feature) && !filterDowntown(feature);
+    }
+});
+
+// Layer groups
+// var mbtaLayerGroup = L.layerGroup(mbtaStationsNoDowntownLayer, mbtaStationsDowntownOnlyLayer);
 
 // Layer controls, scale configuration
 var baseMaps = {
@@ -71,35 +103,57 @@ var overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
 
-// Zoom event listener
-// to toggle station layer
+// Event listeners
+
+// Toggle station labels at various zoom levels
 map.on('zoomend', function() {
-    if (map.getZoom() >= 13 ) {
-         map.addLayer(mbtaStationsLayer);
-    } else {
-        map.removeLayer(mbtaStationsLayer);
-    }
+    toggleStationLabels();
+});
+// When MBTA Lines layer removed, also remove station labels
+mbtaLinesLayer.on('remove', function(e) {
+    map.removeLayer(mbtaStationsNoDowntownLayer);
+    map.removeLayer(mbtaStationsDowntownOnlyLayer);
+});
+// Inverse, considering zoom levels
+mbtaLinesLayer.on('add', function(e) {
+    toggleStationLabels();
 });
 
-// var popup = L.popup()
-//   .setLatLng([42.41, -71.10])
-//   .setContent("I am a standalone popup.")
-//   .openOn(map);
-
-function getLineColor(feature) {
-    switch (feature.properties.LINE) {
-        case 'RED': return "#d1342cdd";
-        case 'BLUE': return "#2374e6cf";
-        case 'GREEN': return "#0d7210df";
-        case 'ORANGE': return "#ffa200d2";
+// Please refactor me
+function toggleStationLabels() {
+    if (map.hasLayer(mbtaLinesLayer)) {
+        // console.log(map.getZoom());
+        // Show station labels, no downtown
+        if (map.getZoom() === 13 || map.getZoom() === 14) {
+            if (!map.hasLayer(mbtaStationsNoDowntownLayer)) {
+                map.addLayer(mbtaStationsNoDowntownLayer);
+            }
+            map.removeLayer(mbtaStationsDowntownOnlyLayer);
+            // Very zoomed in, show downtown
+        } else if (map.getZoom() > 14) {
+            if (!map.hasLayer(mbtaStationsDowntownOnlyLayer)) {
+                map.addLayer(mbtaStationsDowntownOnlyLayer);
+            }
+        }
+        else {
+        map.removeLayer(mbtaStationsDowntownOnlyLayer);
+        map.removeLayer(mbtaStationsNoDowntownLayer);
+        }
+    }
+    // MBTA layer not on
+    else {
+        map.removeLayer(mbtaStationsDowntownOnlyLayer);
+        map.removeLayer(mbtaStationsNoDowntownLayer);
     }
 }
 
-function filterSilver(feature) {
-    return !feature.properties.LINE.includes('SILVER');
-}
+// Hue slider
+const slider = document.getElementById("hueSlider");
+const watercolorLayerDOM = document.querySelector(".watercolor-layer");
+const valueDisplay = document.getElementById("hueSliderValue");
+slider.addEventListener("input", function () {
+    const hue = slider.value;
+    watercolorLayerDOM.style.filter = `hue-rotate(${hue}deg)`;
+    valueDisplay.textContent = `${hue}°`;
+});
 
-function isMobile() {
-// return navigator.userAgentData.mobile;
-return window.matchMedia("only screen and (max-width: 768px)").matches;
-};

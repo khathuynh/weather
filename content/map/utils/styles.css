@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body { 
+    margin: 0 auto;
+    --main-width: 750px;
+    --main-padding: 1.4em;
+    max-width: var(--main-width);
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+    p {
+        font-size: .9rem;
+    }
+}
+
+.flex-container {
+    display: flex; 
+    gap: 20x;
+}
+
+.flex-child {
+    /* Makes both divs grow equally to fill the container width */
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#map {
+    height: 70vh;
+}
+
+.watercolor-layer {  filter: hue-rotate(50deg); }
+.lite-neighborhood-layer { mix-blend-mode: multiply; } 
+
+image { image-rendering: crisp-edges; }
+
+.station-names {
+    p {
+    display: inline-block;
+    font-size: .7rem; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.531); /* Semi-transparent black background */
+    box-shadow: 0 0 4px 4px rgba(243, 232, 232, 0.583); /* Adds a blurred shadow around the text */
+    }
+}
+        
+/* #map .leaflet-tile-pane {
+filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
+} */

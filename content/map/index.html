@@ -4,14 +4,6 @@
   <meta charset="utf-8" />
   <title>Boston Metro Map</title>
   <style>
-    body { margin: 0; }
-    image { image-rendering: crisp-edges; }
-    #map {height: 600px;}
-    /* #map .leaflet-tile-pane {
-    filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
-    } */
-    .watercolor-layer {  filter: hue-rotate(50deg); }
-    .lite-neighborhood-layer { mix-blend-mode: multiply; } 
   </style>
   <link rel="stylesheet" href="utils/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -22,6 +14,7 @@
   crossorigin=""></script>
   <script src="https://cdn.osmbuildings.org/classic/0.2.2b/OSMBuildings-Leaflet.js"></script>
   <link rel="stylesheet" href="utils/L.Control.BetterScale.css">
+  <script src="utils/helpers.js"></script>
   <script src="utils/L.Control.BetterScale.js"></script>
   <script src="utils/displayMap.js" type="module"></script> 
   <script src="data/mbtaNode.js"></script>
@@ -30,6 +23,20 @@
 </head>
 
 <body>
-<div id="map"></div>
+<div class="flex-container">
+  <div id="controls" style="margin-left: auto; padding-bottom: 1em;">
+    <label for="hueSlider">Hue Rotate:</label>
+    <input type="range" id="hueSlider" min="0" max="360" value="50">
+    <span id="hueSliderValue">50°</span>
+  </div>
+</div>
+<div class="flex-container">
+  <div class="flex-child" style="flex: 1;" id="map"></div>
+  <!-- <div class="flex-child" style="flex: 3;" id="map"></div> -->
+  <!-- <div class="flex-child" style="flex: 2;" id="vignette-area" style="border: 1px solid black; padding: 10px; min-height: 20px;">
+    Default
+  </div> -->
+</div>
+
 </body>
 </html>
