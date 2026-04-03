@@ -2,7 +2,10 @@ var map = L.map('map').setView([42.3601, -71.0595], 12);
 map.setMaxBounds([
     [42.44631602002316, -70.91989523904654],
     [42.187134871022494, -71.20475356314114]
-])
+]);
+
+map.createPane("storyPane");
+map.getPane('storyPane').style.zIndex = 625; 
 
 // Base layer
 var watercolorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.png', {
@@ -32,7 +35,7 @@ var mbtaLinesLayer = L.geoJSON(mbtaArcsJson, {
     style: function(feature) {
         return { 
             weight: 5,
-            opacity: .8,
+            opacity: .6,
             color: getLineColor(feature)
         }
     },
@@ -50,9 +53,13 @@ var mbtaStationsNoDowntownLayer = L.geoJSON(mbtaNodesJson, {
         iconSize: [100, 20],
         iconAnchor: [0, 8]
         });
-        var label = L.marker([latlng.lat, latlng.lng], {icon: text});
+        var label = L.marker([latlng.lat, latlng.lng], {
+            interactive: false,
+            icon: text
+        });
 
         var circle = L.circleMarker(latlng, {
+        interactive: false,
         color: 'rgb(0, 0, 0)',
         fillColor: getLineColor(point),
         fillOpacity: 1,
@@ -76,9 +83,13 @@ var mbtaStationsDowntownOnlyLayer = L.geoJSON(mbtaNodesJson, {
         iconSize: [100, 20],
         iconAnchor: [0, 7]
         });
-        var label = L.marker([latlng.lat, latlng.lng], {icon: text});
+        var label = L.marker([latlng.lat, latlng.lng], {
+            interactive: false,
+            icon: text
+        });
 
         var circle = L.circleMarker(latlng, {
+        interactive: false,
         color: 'rgb(0, 0, 0)',
         fillColor: getLineColor(point),
         fillOpacity: 1,
@@ -142,7 +153,7 @@ var boatLayer = L.geoJSON(boatNode, {
 });
 
 var poiLayer = L.geoJSON(pointsOfInterestNode, {
-    interactive: false, 
+    interactive: false,
     pointToLayer: function(point, latlng) {
         var text = L.divIcon({
             className: 'poi-names',
@@ -152,10 +163,12 @@ var poiLayer = L.geoJSON(pointsOfInterestNode, {
         });
         var label = L.marker([latlng.lat, latlng.lng], {
             interactive: false,
+            pane: 'storyPane',
             icon: text});
         
         var circle = L.circleMarker([latlng.lat, latlng.lng],{
             interactive: false, 
+            pane: 'storyPane',
             color: 'red',
             fillColor: 'rgb(225, 35, 73)',
             fillOpacity: 1,
@@ -164,7 +177,10 @@ var poiLayer = L.geoJSON(pointsOfInterestNode, {
 
         var hoverRadius = L.circleMarker([latlng.lat, latlng.lng],{
             stroke: false,
+            pane: 'storyPane',
             fillOpacity: 0,
+            fillColor:  'rgb(225, 255, 0)',
+            color: 'rgba(225, 255, 0, 0.28)',
             radius: 25
         });
         hoverRadius.bindTooltip(point.properties.description, {
@@ -173,24 +189,48 @@ var poiLayer = L.geoJSON(pointsOfInterestNode, {
             direction: 'auto',
             sticky: true
             });
+        
+        hoverRadius.on('mouseover', function (e) {
+            this.setStyle({
+            fillOpacity: 0.32,
+            stroke: true
+            });
+        });
+        hoverRadius.on('mouseout', function (e) {
+            this.setStyle({
+            fillOpacity: 0,
+            stroke: false
+            });
+        });
 
-        return L.layerGroup([label, circle, hoverRadius]);
+        return L.layerGroup([label, circle, hoverRadius], {pane: 'tooltipPane'});
     }
-}).addTo(map);
+});
 
 var poiArcLayer = L.geoJSON(pointsOfInterestArc, {
     interactive: false, 
     style: function(feature) {
         return { 
-            weight: 2,
-            opacity: .9,
-            color: 'rgb(255, 0, 0)',
+            weight: 4,
+            opacity: .85,
+            color: 'rgb(255, 68, 0)',
             dashArray: '5, 5'
 
         }
     }
-}).addTo(map);
+});
 
+var startHere = L.tooltip({ 
+    permanent: true,
+    direction: 'right',
+    className: 'start-here'
+
+ })
+  .setContent("<- Start here.")
+  .setLatLng([42.415, -71.08]);
+
+var storyLayer = L.featureGroup([poiLayer, poiArcLayer, startHere]);
+storyLayer.addTo(map);
 
 // Layer groups
 // var mbtaLayerGroup = L.layerGroup(mbtaStationsNoDowntownLayer, mbtaStationsDowntownOnlyLayer);
@@ -207,8 +247,14 @@ var overlayMaps = {
 'Libraries': libraryLayer,
 '2.5D buildings': osm
 }
-L.control.layers(baseMaps, overlayMaps).addTo(map);
+var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
+
+var container = layerControl.getContainer();
+var title = document.createElement('span');
+title.classList.add('layer-control-title');
+title.innerHTML = 'Layers';
+container.prepend(title);
 
 // Event listeners
 

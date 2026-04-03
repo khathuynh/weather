@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+@import url(https://fonts.googleapis.com/css?family=DynaPuff);
 
 body { 
     margin: 0 auto;
@@ -14,7 +15,7 @@ body {
         font-family: "Roboto Mono", monospace;
         font-weight: 300;
         font-style: normal;
-    }
+    };
 }
 
 .flex-container {
@@ -49,9 +50,11 @@ image { image-rendering: crisp-edges; }
 .poi-names {
     p {
     display: inline-block;
-    font-weight: 1000;
-    font-style: bold;
-    font-size: 1rem; 
+    font-size: 1.2rem; 
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     border-radius: 10px; 
     background-color: rgba(255, 255, 255, 0.531); /* Semi-transparent black background */
     box-shadow: 0 0 4px 4px rgba(243, 232, 232, 0.583); /* Adds a blurred shadow around the text */
@@ -73,6 +76,29 @@ image { image-rendering: crisp-edges; }
     /* background-color: rgba(255, 255, 255, 0.934); */
 }
 
+.start-here.leaflet-tooltip {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: .8rem;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    color: black;
+}
+
+.leaflet-control-layers.leaflet-control {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+    span {
+        font-family: "Roboto Mono", monospace;
+        font-size: .6rem;
+    }
+    .layer-control-title {
+        font-size: .7rem;
+    }
+}
 /* #map .leaflet-tile-pane {
 filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
 } */
