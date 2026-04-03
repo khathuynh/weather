@@ -19,14 +19,16 @@ function filterDowntown(feature) {
         feature.properties.STATION.includes('North Station') ||
         feature.properties.STATION.includes('Haymarket') ||
         feature.properties.STATION.includes('Chinatown') ||
-        feature.properties.STATION.includes('Park Street') ||
+        // feature.properties.STATION.includes('Park Street') ||
         feature.properties.STATION.includes('Downtown Crossing') ||
         feature.properties.STATION.includes('Government Center') ||
         feature.properties.STATION.includes('State') ||
         feature.properties.STATION.includes('Aquarium') ||
         feature.properties.STATION.includes('Lechmere') ||
         feature.properties.STATION.includes('Bowdoin') ||
-        feature.properties.STATION.includes('Arlington')
+        feature.properties.STATION.includes('Arlington') ||
+        feature.properties.STATION.includes('Copley') ||
+        feature.properties.STATION.includes('Boylston')
     );
 }
 
@@ -36,7 +38,6 @@ function filterForTravelPath(feature) {
         // exclude before and after stations
     return (
     feature.properties.ROUTE.includes('Forest Hills to Oak Grove') &&
-    // list1.some(element => list2.includes(element));
     feature.properties.STATIONS?.some(station => ["Wellington", "Assembly", "Community College", "North Station"].includes(station))
     );
 }
@@ -44,10 +45,11 @@ function filterForTravelPath(feature) {
 // Other
 function getLineColor(feature) {
     switch (feature.properties.LINE) {
-        case 'RED': return "#d1342cdd";
-        case 'BLUE': return "#2374e6cf";
-        case 'GREEN': return "#0d7210df";
-        case 'ORANGE': return "#ffa200d2";
+        case 'RED': return "#f40041";
+        case 'BLUE': return "#2374e6";
+        case 'GREEN': return "#0d7210";
+        case 'ORANGE': return "#ffa200";
+        default: return "#e0ea2bef";
     }
 }
 

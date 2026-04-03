@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 
 body { 
     margin: 0 auto;
@@ -10,7 +11,9 @@ body {
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
     p {
-        font-size: .9rem;
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-style: normal;
     }
 }
 
@@ -29,7 +32,7 @@ body {
     height: 70vh;
 }
 
-.watercolor-layer {  filter: hue-rotate(50deg); }
+.watercolor-layer { filter: hue-rotate(50deg); }
 .lite-neighborhood-layer { mix-blend-mode: multiply; } 
 
 image { image-rendering: crisp-edges; }
@@ -37,13 +40,39 @@ image { image-rendering: crisp-edges; }
 .station-names {
     p {
     display: inline-block;
-    font-size: .7rem; 
+    font-size: .65rem; 
     border-radius: 10px; 
     background-color: rgba(255, 255, 255, 0.531); /* Semi-transparent black background */
     box-shadow: 0 0 4px 4px rgba(243, 232, 232, 0.583); /* Adds a blurred shadow around the text */
     }
 }
-        
+.poi-names {
+    p {
+    display: inline-block;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 1rem; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.531); /* Semi-transparent black background */
+    box-shadow: 0 0 4px 4px rgba(243, 232, 232, 0.583); /* Adds a blurred shadow around the text */
+    }
+}
+.sailboat-icon {
+    opacity: 0.8;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.853);
+    /* border-radius: 90%;  */
+    outline: 1px solid rgb(0, 0, 0);
+}
+
+.leaflet-tooltip.tooltip {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    border: 2px solid #333;
+    border-radius: 6px;
+    /* background-color: rgba(255, 255, 255, 0.934); */
+}
+
 /* #map .leaflet-tile-pane {
 filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
 } */
