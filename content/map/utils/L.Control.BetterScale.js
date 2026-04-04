@@ -20,7 +20,10 @@ L.Control.BetterScale = L.Control.extend({
         t.off(this.options.updateWhenIdle ? "moveend" : "move", this._update, this)
     },
     _addScales: function (t, e, i) {
-        this._iScale = L.DomUtil.create("div", e + "-label-div", i), this._iScaleLabel = L.DomUtil.create("div", e + "-label", this._iScale), this._iScaleFirstNumber = L.DomUtil.create("div", e + "-label " + e + "-first-number", this._iScale), this._iScaleSecondNumber = L.DomUtil.create("div", e + "-label " + e + "-second-number", this._iScale)
+        this._iScale = L.DomUtil.create("div", e + "-label-div", i),
+        this._iScaleLabel = L.DomUtil.create("div", e + "-label", this._iScale), 
+        this._iScaleFirstNumber = L.DomUtil.create("div", e + "-label " + e + "-first-number", this._iScale), 
+        this._iScaleSecondNumber = L.DomUtil.create("div", e + "-label " + e + "-second-number", this._iScale) 
     },
     _update: function () {
         var t = this._map.getBounds(),
@@ -53,7 +56,7 @@ L.Control.BetterScale = L.Control.extend({
             h = this._iScaleSecondNumber,
             l = this._iScale,
             u = this._iScaleLabel;
-        u.innerHTML = "0", a > 2640 ? (e = a / 5280, i = this._getRoundNum(e), o = this._getRoundNum(e / 2), l.style.width = this._getScaleWidth(i / e) + "px", r.innerHTML = o, h.innerHTML = i + "mi") : (n = this._getRoundNum(a), s = this._getRoundNum(a / 2), l.style.width = this._getScaleWidth(n / a) + "px", r.innerHTML = s, h.innerHTML = n + "ft")
+        u.innerHTML = "0", a > 2640 ? (e = a / 5280, i = this._getRoundNum(e), o = this._getRoundNum(e / 2), l.style.width = this._getScaleWidth(i / e) + "px", r.innerHTML = o, h.innerHTML = i + "mi" + " (" + (i * 20) + "min walk)") : (n = this._getRoundNum(a), s = this._getRoundNum(a / 2), l.style.width = this._getScaleWidth(n / a) + "px", r.innerHTML = s, h.innerHTML = n + "ft" + " (" + (n / 250) + "min walk)")
     },
     _getScaleWidth: function (t) {
         return Math.round(this.options.maxWidth * t) - 10

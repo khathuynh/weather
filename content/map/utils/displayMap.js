@@ -155,24 +155,24 @@ var boatLayer = L.geoJSON(boatNode, {
 var poiLayer = L.geoJSON(pointsOfInterestNode, {
     interactive: false,
     pointToLayer: function(point, latlng) {
-        var text = L.divIcon({
+        var number = L.divIcon({
             className: 'poi-names',
             html: `<p>${point.properties.id}</p>`,
             iconSize: [100, 20],
             iconAnchor: [0, 12]
         });
-        var label = L.marker([latlng.lat, latlng.lng], {
+        var numberMarker = L.marker([latlng.lat, latlng.lng], {
             interactive: false,
             pane: 'storyPane',
-            icon: text});
-        
-        var circle = L.circleMarker([latlng.lat, latlng.lng],{
-            interactive: false, 
-            pane: 'storyPane',
-            color: 'red',
-            fillColor: 'rgb(225, 35, 73)',
-            fillOpacity: 1,
-            radius: 7
+            icon: number});
+        var pin = new L.icon({
+        iconUrl: './assets/red-pin.png',
+        iconSize: [60, 45],
+        iconAnchor: [30, 22]
+        });
+        var pinMarker = L.marker([latlng.lat, latlng.lng], {
+        interactive: false,
+        icon: pin
         });
 
         var hoverRadius = L.circleMarker([latlng.lat, latlng.lng],{
@@ -202,9 +202,68 @@ var poiLayer = L.geoJSON(pointsOfInterestNode, {
             stroke: false
             });
         });
+        if (point.properties.id === "1") { 
+            hoverRadius.on('click', function(e) {
+                console.log(e.latlng);
+                // var newy = L.latlng()
+                // console.log(newy);
+                map.flyTo([42.40359921636448, -71.0856150144597], 14);
+            });
+        };
 
-        return L.layerGroup([label, circle, hoverRadius], {pane: 'tooltipPane'});
+        return L.layerGroup([numberMarker, pinMarker, hoverRadius], {pane: 'tooltipPane'});
     }
+    // pointToLayer: function(point, latlng) {
+    //     var text = L.divIcon({
+    //         className: 'poi-names',
+    //         html: `<p>${point.properties.id}</p>`,
+    //         iconSize: [100, 20],
+    //         iconAnchor: [0, 12]
+    //     });
+    //     var label = L.marker([latlng.lat, latlng.lng], {
+    //         interactive: false,
+    //         pane: 'storyPane',
+    //         icon: text});
+        
+    //     var circle = L.circleMarker([latlng.lat, latlng.lng],{
+    //         interactive: false, 
+    //         pane: 'storyPane',
+    //         color: 'red',
+    //         fillColor: 'rgb(225, 35, 73)',
+    //         fillOpacity: 1,
+    //         radius: 7
+    //     });
+
+    //     var hoverRadius = L.circleMarker([latlng.lat, latlng.lng],{
+    //         stroke: false,
+    //         pane: 'storyPane',
+    //         fillOpacity: 0,
+    //         fillColor:  'rgb(225, 255, 0)',
+    //         color: 'rgba(225, 255, 0, 0.28)',
+    //         radius: 25
+    //     });
+    //     hoverRadius.bindTooltip(point.properties.description, {
+    //         className: 'tooltip',
+    //         permanent: false,
+    //         direction: 'auto',
+    //         sticky: true
+    //         });
+        
+    //     hoverRadius.on('mouseover', function (e) {
+    //         this.setStyle({
+    //         fillOpacity: 0.32,
+    //         stroke: true
+    //         });
+    //     });
+    //     hoverRadius.on('mouseout', function (e) {
+    //         this.setStyle({
+    //         fillOpacity: 0,
+    //         stroke: false
+    //         });
+    //     });
+
+    //     return L.layerGroup([label, circle, hoverRadius], {pane: 'tooltipPane'});
+    // }
 });
 
 var poiArcLayer = L.geoJSON(pointsOfInterestArc, {
@@ -213,7 +272,7 @@ var poiArcLayer = L.geoJSON(pointsOfInterestArc, {
         return { 
             weight: 4,
             opacity: .85,
-            color: 'rgb(255, 68, 0)',
+            color: 'rgb(255, 0, 115)',
             dashArray: '5, 5'
 
         }
@@ -245,7 +304,7 @@ var overlayMaps = {
 'Protected bike trails': bikeNetworkLayer,
 'Boat launches': boatLayer,
 'Libraries': libraryLayer,
-'2.5D buildings': osm
+'2.5D buildings (zoom in)': osm
 }
 var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);

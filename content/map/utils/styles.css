@@ -99,6 +99,13 @@ image { image-rendering: crisp-edges; }
         font-size: .7rem;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .leaflet-control-attribution {
+        height: 25px;
+        line-height: 12px !important;
+    }
+}
 /* #map .leaflet-tile-pane {
 filter: sepia(1) saturate(5) hue-rotate(290deg) brightness(1.2);
 } */

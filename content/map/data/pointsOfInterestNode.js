@@ -112,7 +112,7 @@ var pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "8", 
-        "description" : "Harvard"
+        "description" : "Follow the crimson honey"
       }
     },
         {
@@ -127,7 +127,7 @@ var pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "9", 
-        "description" : "Alewife"
+        "description" : "Terminus"
       }
     }
   ]

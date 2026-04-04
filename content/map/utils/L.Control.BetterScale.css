@@ -2,8 +2,7 @@
 	height: 15px;
 }
 .leaflet-control-better-scale-mobile {
-	height: 55px;
-    /* margin-bottom: 50px !important; */
+    margin-bottom: 45px !important;
 }
 .leaflet-control-better-scale-upper-first-piece {
     top: 0%;
@@ -45,9 +44,8 @@
 }
 .leaflet-control-better-scale-label {
     position: absolute;
+    left: 0%;
     white-space: nowrap;   /* prevents vertical wrapping */
-    width: auto;           /* let text size naturally */
-    text-align: center;
     color: #fff;
     font-family: sans-serif;
     font-weight: bold;
@@ -56,7 +54,9 @@
 }
 .leaflet-control-better-scale-first-number {
     left: 45%;
+    position: absolute;
 }
 .leaflet-control-better-scale-second-number {
-    right: 0;
+    left: 85%;
+    position: absolute;
 }
