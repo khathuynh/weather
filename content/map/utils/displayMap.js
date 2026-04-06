@@ -27,6 +27,17 @@ className: 'lite-neighborhood-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
 });
 
+var waterLayer = L.geoJSON(waterFeatures, {
+    interactive: false,
+    style: {
+    "color": 'rgba(23, 199, 226, 0.59)',
+    "weight": 2,
+    fillColor: '#33cfff',
+    fillOpacity: 0.5,  
+    "opacity": .8 
+    }
+}).addTo(map);
+
 var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
 map.removeLayer(osm);
 
@@ -34,7 +45,7 @@ var mbtaLinesLayer = L.geoJSON(mbtaArcsJson, {
     interactive: false,
     style: function(feature) {
         return { 
-            weight: 5,
+            weight: 6.5,
             opacity: .6,
             color: getLineColor(feature)
         }
@@ -62,7 +73,7 @@ var mbtaStationsNoDowntownLayer = L.geoJSON(mbtaNodesJson, {
         interactive: false,
         color: 'rgb(0, 0, 0)',
         fillColor: getLineColor(point),
-        fillOpacity: 1,
+        fillOpacity: .85,
         radius: 7,
         weight: 1
         });
@@ -120,7 +131,7 @@ var libraryLayer = L.geoJSON(libraryNode, {
     interactive: false, 
     pointToLayer: function(point, latlng) {
         var text = new L.icon({
-        className: 'sailboat-icon',
+        className: 'library-icon',
         html: `<p>${point.properties.name}</p>`,
         iconUrl: './assets/libby.svg',
         iconSize: [20, 20],
@@ -140,8 +151,8 @@ var boatLayer = L.geoJSON(boatNode, {
         var text = new L.icon({
         className: 'sailboat-icon',
         html: `<p>${point.properties.name}</p>`,
-        iconUrl: './assets/sailboat.svg',
-        iconSize: [18, 18],
+        iconUrl: './assets/sailboat.png',
+        iconSize: [19, 19],
         iconAnchor: [0, 0]
         });
         var label = L.marker([latlng.lat, latlng.lng], {
@@ -288,8 +299,30 @@ var startHere = L.tooltip({
   .setContent("<- Start here.")
   .setLatLng([42.415, -71.08]);
 
+var ameliaText = L.divIcon({
+    className: 'station-names',
+    html: `<p>Amelia's house</p>`,
+    iconSize: [100, 20],
+    iconAnchor: [0, 8]
+});
+var ameliaLabel = L.marker([42.424686648939506, -71.13112744907478], {
+    interactive: false,
+    icon: ameliaText
+});
+var ameliaHouse = L.circleMarker([42.424686648939506, -71.13112744907478], {
+    interactive: false,
+    color: 'rgb(0, 0, 0)',
+    fillColor:'rgb(111, 230, 90)',
+    fillOpacity: .85,
+    radius: 5,
+    weight: 1
+    }
+);
+
 var storyLayer = L.featureGroup([poiLayer, poiArcLayer, startHere]);
 storyLayer.addTo(map);
+
+var ameliaLayer = L.featureGroup([ ameliaHouse, ameliaLabel]);
 
 // Layer groups
 // var mbtaLayerGroup = L.layerGroup(mbtaStationsNoDowntownLayer, mbtaStationsDowntownOnlyLayer);
@@ -302,11 +335,13 @@ var overlayMaps = {
 'Cities + streets': liteCitiesLayer,
 'MBTA lines': mbtaLinesLayer,
 'Protected bike trails': bikeNetworkLayer,
-'Boat launches': boatLayer,
+'Public boat launches': boatLayer,
 'Libraries': libraryLayer,
-'2.5D buildings (zoom in)': osm
+'Water features': waterLayer,
+'2.5D buildings (high zoom only)': osm,
+'Surprise': ameliaLayer
 }
-var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+var layerControl = L.control.layers(baseMaps, overlayMaps, { hideSingleBase: true }).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
 
 var container = layerControl.getContainer();
@@ -321,6 +356,11 @@ container.prepend(title);
 map.on('zoomend', function() {
     toggleStationLabels();
 });
+
+map.on('overlayadd',function() {
+    storyLayer.bringToFront();
+});
+
 // When MBTA Lines layer removed, also remove station labels
 mbtaLinesLayer.on('remove', function(e) {
     map.removeLayer(mbtaStationsNoDowntownLayer);

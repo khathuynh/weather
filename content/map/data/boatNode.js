@@ -1,4 +1,4 @@
-var boatNode = {
+const boatNode = {
   "type" : "FeatureCollection", 
   "features" : [
     {
@@ -335,6 +335,127 @@ var boatNode = {
         "Editor" : "myrwagis", 
         "Name" : "Amelia Earhart Dam and Locks", 
         "Description" : "Small craft may use the locks for access."
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.07071871261417,
+          42.36704987156281
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.07325843379137,
+          42.35890337343719
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.07585197267387,
+          42.35681845705636
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.07424197487077,
+          42.357629388408526
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.08607906900002,
+          42.353105670923554
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.0977240209371,
+          42.3511133156986
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.11278753171996,
+          42.3537831626351
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.1314244861254,
+          42.36901547418441
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.08177378572637,
+          42.362802738785206
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.16526137996428,
+          42.358636499905714
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.02933316094577,
+          42.38342969114089
+        ],
+        "type": "Point"
       }
     }
   ]

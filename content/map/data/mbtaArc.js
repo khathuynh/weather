@@ -1,4 +1,4 @@
-var mbtaArcsJson = 
+const mbtaArcsJson = 
 {
 "type": "FeatureCollection",
 "name": "MBTA_ARC",

@@ -1,4 +1,4 @@
-var pointsOfInterestNode = {
+const pointsOfInterestNode = {
   "type" : "FeatureCollection", 
   "features" : [
     {
@@ -49,8 +49,8 @@ var pointsOfInterestNode = {
       {
         "type" : "Point", 
         "coordinates" : [
-          -71.12034394612532,
-          42.40637346956689
+          -71.12213161069766,
+          42.40782532359762
         ]
       }, 
       "properties" : {
@@ -76,8 +76,8 @@ var pointsOfInterestNode = {
       "type": "Feature",
       "geometry": {
         "coordinates": [
-          -71.09450516635619,
-          42.37412069329426
+          -71.09115369829496,
+          42.378990962814186
         ],
         "type": "Point"
       },
@@ -97,7 +97,7 @@ var pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "7", 
-        "description" : "Downtown"
+        "description" : "Black hole"
       }
     },
     {

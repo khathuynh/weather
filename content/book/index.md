@@ -1,18 +1,13 @@
-**Untitled novella (magic realism, science and literary fiction), in progress**
+**Untitled walkathon novella**
 
-Two childhood friends reconnect for twenty-four hours. After years of radio silence, they walk and talk for miles on end. It’s an overnight rush. A supernatural slumber party. Of course one is a human, and the other is a moth. They might just complete an exorcism, find Amelia Earhart, solve a murder, and save their hometown—whatever it takes to be friends again. It's set in Boston.
+Two childhood friends set off a 24-hour walkathon, puzzling over a letter that claims Amelia Earhart (d. 1937), who was last seen in their city before her final flight, is still alive. 
 
----
+I anchor this mystery in the Boston metro: To explore the past and present life of its walkable ‘streetcar suburbs,’ to speculate the worlds we lose as its neighborhoods and minds upscale.
 
-What does the book believe in? A **spirit of place**. That there are more stories to be told… beyond those set squarely in the media powerhouses of NYC and LA, in the uninspired critiques of suburbia, and in the declension narrative of gentrification. It considers the seemingly inevitable way that time transforms the world. Until it is unrecognizable to those who have endured it. 
+This walk is a [‘gentrification story’](https://press.princeton.edu/ideas/how-i-let-go-of-gentrification). The characters traverse their hometown and rediscover its quirks and charms that make it altogether unique, while mourning what was. But the ground is shifting beneath them. They dream up lost worlds, car-less worlds, with canoe-share in place of bikeshare, spirited worlds tied up in the hands of elites. Death and life are muddled between. They can revisit time, as space, to solve Amelia's disappearance. Chaos abound.
 
-In the end, the friends question what it means to borrow a life. Finding your place is important. Why does it feel like for half our lives we search for this feeling, and by the end long to see it how it was before? But the coming of ages can’t be stopped; it’ll come and go just the same.
-
-The neighborhood is always changing.
+May they walk worlds into existence, ones they can believe in and belong to.
 
 ---
 
-Comparable titles
-1. *Gone Like Yesterday* by Janelle Williams uses the symbolic power of the 'gypsy' moth to give voice to society's discarded. 
-2. *A Tale for the Time Being* by Ruth Ozeki employs a Buddhist treatment of time as collapsible, cyclical, absent. 
-3. *The Book of Goose* by Yiyun Li and *The Myth of You and Me* by Leah Stewart paint a fragile portrait of a first true friendship.
+Today, the streetcar suburbs–Cambridge, Somerville, Medford– are known as dense, transit-linked, walkable communities. They developed because of horse-drawn railroads and electric trolley lines built a few hundred years ago, those that would later form the oldest subway in America. Today, many early lines are gone; and though few were rebuilt; cars often rule the road; as the tree canopy disappears; the last remaining landlots are up for grabs. Land is speculated and sold and we are convinced that growth is inevitable. As the pseudoburbs reach peak density, will they still be walkable, or even livable? What of authenticity? What future must follow a black hole? These are questions the characters want answered.

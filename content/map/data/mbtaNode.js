@@ -1,4 +1,4 @@
-var mbtaNodesJson =
+const mbtaNodesJson =
 {
 "type": "FeatureCollection",
 "name": "MBTA_NODE",
