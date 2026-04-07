@@ -241,78 +241,29 @@ var poiLayer = L.geoJSON(pointsOfInterestNode, {
         
         hoverRadius.on('mouseover', function (e) {
             this.setStyle({
-            fillOpacity: 0.32,
-            stroke: true
+                fillOpacity: 0.32,
+                stroke: true
             });
+            if (e.target._tooltip._content === '4am Terminus') {
+                document.getElementById('vignette-area').innerHTML = `In Massachusetts only thirty minutes from Alewife - I lay in my room, wondering why...`;
+            }
         });
         hoverRadius.on('mouseout', function (e) {
             this.setStyle({
             fillOpacity: 0,
             stroke: false
             });
+            document.getElementById('vignette-area').innerHTML = '';
         });
+        // Fly to starting point
         if (point.properties.id === "1") { 
             hoverRadius.on('click', function(e) {
-                console.log(e.latlng);
-                // var newy = L.latlng()
-                // console.log(newy);
                 map.flyTo([42.40359921636448, -71.0856150144597], 14);
             });
         };
 
         return L.layerGroup([numberMarker, pinMarker, hoverRadius], {pane: 'tooltipPane'});
     }
-    // pointToLayer: function(point, latlng) {
-    //     var text = L.divIcon({
-    //         className: 'poi-names',
-    //         html: `<p>${point.properties.id}</p>`,
-    //         iconSize: [100, 20],
-    //         iconAnchor: [0, 12]
-    //     });
-    //     var label = L.marker([latlng.lat, latlng.lng], {
-    //         interactive: false,
-    //         pane: 'storyPane',
-    //         icon: text});
-        
-    //     var circle = L.circleMarker([latlng.lat, latlng.lng],{
-    //         interactive: false, 
-    //         pane: 'storyPane',
-    //         color: 'red',
-    //         fillColor: 'rgb(225, 35, 73)',
-    //         fillOpacity: 1,
-    //         radius: 7
-    //     });
-
-    //     var hoverRadius = L.circleMarker([latlng.lat, latlng.lng],{
-    //         stroke: false,
-    //         pane: 'storyPane',
-    //         fillOpacity: 0,
-    //         fillColor:  'rgb(225, 255, 0)',
-    //         color: 'rgba(225, 255, 0, 0.28)',
-    //         radius: 25
-    //     });
-    //     hoverRadius.bindTooltip(point.properties.description, {
-    //         className: 'tooltip',
-    //         permanent: false,
-    //         direction: 'auto',
-    //         sticky: true
-    //         });
-        
-    //     hoverRadius.on('mouseover', function (e) {
-    //         this.setStyle({
-    //         fillOpacity: 0.32,
-    //         stroke: true
-    //         });
-    //     });
-    //     hoverRadius.on('mouseout', function (e) {
-    //         this.setStyle({
-    //         fillOpacity: 0,
-    //         stroke: false
-    //         });
-    //     });
-
-    //     return L.layerGroup([label, circle, hoverRadius], {pane: 'tooltipPane'});
-    // }
 });
 
 var poiArcLayer = L.geoJSON(pointsOfInterestArc, {

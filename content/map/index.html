@@ -34,7 +34,10 @@
     <a href="../book">here.</a></p>
 </div>
 <div class="flex-container">
-  <div id="controls" style="margin-left: auto; padding-bottom: 1em;">
+  <div class="flex-child" style="flex: 4; margin-left: -5px" id="vignette-area">
+    <!-- Default -->
+  </div>
+  <div  class="flex-child" style="flex: 2; margin-left: auto;" id="controls">
     <label for="hueSlider">Hue:</label>
     <input type="range" id="hueSlider" min="0" max="360" value="40">
     <span id="hueSliderValue">40°</span>
@@ -42,10 +45,6 @@
 </div>
 <div class="flex-container">
   <div class="flex-child" style="flex: 1;" id="map"></div>
-  <!-- <div class="flex-child" style="flex: 3;" id="map"></div> -->
-  <!-- <div class="flex-child" style="flex: 2;" id="vignette-area" style="border: 1px solid black; padding: 10px; min-height: 20px;">
-    Default
-  </div> -->
 </div>
 
 </body>

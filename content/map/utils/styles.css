@@ -21,16 +21,23 @@ body {
 .flex-container {
     display: flex; 
     gap: 20x;
+    min-height: 50px;
 }
 
 .flex-child {
-    /* Makes both divs grow equally to fill the container width */
-    padding: 10px;
-    border: 1px solid black;
+    padding: 5px;
 }
 
 #map {
     height: 70vh;
+    border: 1px solid rgb(77, 234, 255);
+}
+
+#vignette-area {
+    font-size: .75rem;
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    color: rgba(128, 128, 128, 0.727);
 }
 
 .watercolor-layer { filter: hue-rotate(50deg); }
