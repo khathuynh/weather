@@ -12,7 +12,7 @@ const pointsOfInterestNode = {
       }, 
       "properties" : {
         "id" : "1", 
-        "description" : "Woods behind my house"
+        "description" : "2:30pm Woods behind my house"
       }
     },
     {
@@ -26,7 +26,7 @@ const pointsOfInterestNode = {
       }, 
       "properties" : {
         "id" : "2", 
-        "description" : "Picnic on the ford"
+        "description" : "3pm Picnic on the ford"
       }
     },
     {
@@ -40,7 +40,7 @@ const pointsOfInterestNode = {
       }, 
       "properties" : {
         "id" : "3", 
-        "description" : "Kayaking the mystic"
+        "description" : "3:30pm Kayaking the mystic"
       }
     },
     {
@@ -55,7 +55,7 @@ const pointsOfInterestNode = {
       }, 
       "properties" : {
         "id" : "4", 
-        "description" : "Tufts university library"
+        "description" : "4pm Tufts university library"
       }
     },
     {
@@ -69,7 +69,7 @@ const pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "5", 
-        "description" : "GLX ribbon cutting"
+        "description" : "4:45pm GLX ribbon cutting"
       }
     },
     {
@@ -83,7 +83,7 @@ const pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "6", 
-        "description" : "Dinky's donuts"
+        "description" : "7pm Dinky's donuts"
       }
     },
     {
@@ -97,7 +97,7 @@ const pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "7", 
-        "description" : "Black hole"
+        "description" : "12am Black hole"
       }
     },
     {
@@ -112,7 +112,7 @@ const pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "8", 
-        "description" : "Follow the crimson honey"
+        "description" : "12:45am Follow the crimson honey"
       }
     },
         {
@@ -127,7 +127,7 @@ const pointsOfInterestNode = {
       },
       "properties" : {
         "id" : "9", 
-        "description" : "Terminus"
+        "description" : "4am Terminus"
       }
     }
   ]

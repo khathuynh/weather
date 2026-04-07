@@ -27,7 +27,7 @@ className: 'lite-neighborhood-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
 });
 
-var waterLayer = L.geoJSON(waterFeatures, {
+var waterBaseLayer = L.geoJSON(waterFeatures, {
     interactive: false,
     style: {
     "color": 'rgba(23, 199, 226, 0.59)',
@@ -36,7 +36,45 @@ var waterLayer = L.geoJSON(waterFeatures, {
     fillOpacity: 0.5,  
     "opacity": .8 
     }
-}).addTo(map);
+});
+
+var mystic = L.divIcon({
+className: 'water-names',
+html: `<p>Mystic River</p>`,
+iconSize: [100, 20],
+iconAnchor: [0, 8]
+});
+          
+var mysticLabel = L.marker([42.40009400779573, -71.07482885756201], {
+    interactive: false,
+    icon: mystic
+});
+var charles = L.divIcon({
+className: 'water-names',
+html: `<p>Charles River</p>`,
+iconSize: [100, 20],
+iconAnchor: [0, 8]
+});
+var charlesLabel = L.marker([42.362017581174115, -71.11067084783625], {
+    interactive: false,
+    icon: charles
+});
+var harbor = L.divIcon({
+className: 'water-names',
+html: `<p>Boston Harbor</p>`,
+iconSize: [100, 20],
+iconAnchor: [0, 8]
+});
+var harborLabel = L.marker([42.35223432675292, -71.0233620966038], {
+    interactive: false,
+    icon: harbor
+});
+          
+var waterLayer = L.layerGroup([waterBaseLayer]);
+mysticLabel.addTo(waterLayer);
+charlesLabel.addTo(waterLayer);
+harborLabel.addTo(waterLayer);
+waterLayer.addTo(map);
 
 var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
 map.removeLayer(osm);
