@@ -76,6 +76,17 @@ charlesLabel.addTo(waterLayer);
 harborLabel.addTo(waterLayer);
 waterLayer.addTo(map);
 
+var water1630Layer = L.geoJSON(waterFeatures1630, {
+    interactive: false,
+    style: {
+    "color": 'rgba(23, 199, 226, 0.59)',
+    "weight": 2,
+    fillColor: '#33cfff',
+    fillOpacity: 0.5,  
+    "opacity": .8 
+    }
+});
+
 var osm = new OSMBuildings(map).load('https://{s}.data.osmbuildings.org/0.2/59fcc2e8/tile/{z}/{x}/{y}.json');
 map.removeLayer(osm);
 
@@ -327,6 +338,7 @@ var overlayMaps = {
 'Public boat launches': boatLayer,
 'Libraries': libraryLayer,
 'Water features': waterLayer,
+'Shoreline 1630 WIP': water1630Layer,
 '2.5D buildings (high zoom only)': osm,
 'Surprise': ameliaLayer
 }
