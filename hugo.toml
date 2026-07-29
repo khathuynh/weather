@@ -50,8 +50,8 @@ url = "/"
 name = "about"
 url = "/about"
 [[params.menu]]
-name = "book"
-url = "/book"
+name = "magnets"
+url = "/gallery"
 [[params.menu]]
 name = "map"
 url = "/map"
@@ -60,3 +60,5 @@ url = "/map"
 [markup]
 [markup.highlight]
 style = 'algol'
+
+assetDir = "assets"

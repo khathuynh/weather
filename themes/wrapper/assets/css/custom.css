@@ -1,4 +1,3 @@
-/* Place custom css here */
 .header-title {
 font-size: 2em;
 }
@@ -59,4 +58,60 @@ flex-wrap: wrap;
 
 .line-summary p {
 	font-size: small;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.gallery-overlay {
+  /* background-color: rgba(255, 9, 9, 0.44); */
+  background-image: url('/checker.avif'); 
+  box-shadow: 0 0 20px 10px #324c5dde;
+
+  /* border: 40px solid transparent; Sets the width of the border area */
+  /* border-image: url(/star.png)10% fill round */
+   /* Repeats/scales the image to fit */
+
+  
+}
+.gallery-background {
+  
+  /* Set your image path here */
+  background-color: rgba(255, 9, 9, 0.117);
+  /* Scale the image to fill the div without distorting */
+  /* background-size: cover;  */
+  
+  /* Center the image within the container */
+  background-position: center; 
+  
+  /* Prevent the image from repeating if the div is large */
+  background-repeat: repeat-y; 
+  /* height: 100vh; */
+  /* Optional: Ensure the div has size to display the image */
+  /* width: 100%; */
+  min-height: 400px;
+  color: white; /* Makes text readable over dark images */
+}
+
+.photo {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #gallery {
+        grid-template-columns: 1fr;
+    }
 }

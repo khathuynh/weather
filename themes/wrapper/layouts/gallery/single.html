@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+<div class="gallery-overlay">
+    <div class="gallery-background">
+        <div id="gallery"></div>
+    </div>
+</div>
+
+<script>
+const photos = [
+{{- $photos := sort (resources.Match "magnets/*") "Name" -}}
+{{- range $photos }}
+    {{- $thumb := .Resize "600x webp q85" }}
+    "{{ $thumb.RelPermalink }}",
+{{- end }}
+];
+</script>
+
+<script src="/js/gallery.js"></script>
+
+{{ end }}
