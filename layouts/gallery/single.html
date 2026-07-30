@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $gallery := resources.Get "gallery/gallery.css" | resources.Minify | fingerprint }}
+<link rel="stylesheet" href="{{ $gallery.RelPermalink }}">
 
 <h1>{{ .Title }}</h1>
 <div class="gallery-overlay">
@@ -17,6 +19,7 @@ const photos = [
 ];
 </script>
 
-<script src="/js/gallery.js"></script>
+{{ $js := resources.Get "gallery/gallery.js" | resources.Minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
 
 {{ end }}

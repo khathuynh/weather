@@ -3,16 +3,6 @@ languageCode = "en-us"
 theme = 'typo'
 title = "Kitty corner of the internet"
 
-[module]
-  replacements = "wrapper -> wrapper"
-
-  [[module.imports]]
-    path = "wrapper"
-  [[module.imports]]
-    path = "github.com/tomfran/typo"
-  [[module.imports]]
-    path = "github.com/Sped0n/bridget/v2"
-
 [taxonomies]
 tag = 'tags'
 
