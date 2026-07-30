@@ -45,20 +45,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Debug Hugo files
-        run: |
-          echo "Files here:"
-          ls -la
-
-          echo "Git root:"
-          git rev-parse --show-toplevel
-
-          echo "Repo tree:"
-          find . -maxdepth 2 -type d | sort
-
-          ls -la layouts
-          ls -la layouts/gallery
-          ls -la themes/typo/layouts/gallery
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
