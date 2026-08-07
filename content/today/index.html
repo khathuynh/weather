@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Today</title>
+  <style>
+    .container {
+  /* Core background configuration */
+  background-image: url('/checker.avif');
+  background-size: cover;       /* Spans the entire element area */
+  background-position: center;  /* Centers the image perfectly */
+  background-repeat: no-repeat; /* Prevents unwanted tiling patterns */
+  background-color: rgba(255, 255, 255, 0.6); 
+  background-blend-mode: lighten; 
+  border-radius: 10px 20px 30px 40px; 
+
+  /* Sizing requirement (Crucial if the div is empty) */
+  width: 100%;
+  min-height: 400px;
+}
+  </style>
+</head>
+
+<body>
+    <div class="container">
+      <img src="./map.png" alt="Description">
+    </div>
+</body>
+</html>

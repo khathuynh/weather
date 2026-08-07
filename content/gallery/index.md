@@ -1,4 +1,4 @@
 ---
-title: Gallery!!
+title: Magnet gallery
 layout: gallery
 ---

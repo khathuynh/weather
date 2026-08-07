@@ -43,6 +43,9 @@ url = "/about"
 name = "magnets"
 url = "/gallery"
 [[params.menu]]
+name = "today"
+url = "/today"
+[[params.menu]]
 name = "map"
 url = "/map"
 

@@ -8,6 +8,7 @@
   /* background-color: rgba(255, 9, 9, 0.44); */
   background-image: url('/checker.avif'); 
   box-shadow: 0 0 20px 10px #324c5dde;
+  border: 2px solid red;
 
   /* border: 40px solid transparent; Sets the width of the border area */
   /* border-image: url(/star.png)10% fill round */
@@ -18,7 +19,7 @@
 .gallery-background {
   
   /* Set your image path here */
-  background-color: rgba(255, 9, 9, 0.117);
+  /* background-color: rgba(255, 9, 9, 0.117); */
   /* Scale the image to fill the div without distorting */
   /* background-size: cover;  */
   
@@ -42,7 +43,7 @@
     object-fit: cover;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     #gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -52,4 +53,26 @@
     #gallery {
         grid-template-columns: 1fr;
     }
+} */
+
+#pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: orangered;
+    color: white;
+}
+
+#pagination a {
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#pagination a.active {
+    background: #333;
+    color: white;
 }
