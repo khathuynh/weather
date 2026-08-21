@@ -5,10 +5,10 @@
 }
 
 .gallery-overlay {
-  /* background-color: rgba(255, 9, 9, 0.44); */
-  background-image: url('/checker.avif'); 
+  background-color: rgba(198, 184, 220, 0.738);
+  /* background-image: url('/checker.avif');  */
   box-shadow: 0 0 20px 10px #324c5dde;
-  border: 2px solid red;
+  border: 2px solid rgb(146, 97, 209);
 
   /* border: 40px solid transparent; Sets the width of the border area */
   /* border-image: url(/star.png)10% fill round */
@@ -61,7 +61,7 @@
     justify-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
-    background: orangered;
+    background: rgb(178, 112, 214);
     color: white;
 }
 
