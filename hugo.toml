@@ -37,7 +37,7 @@ breadcrumbs = false
 name = "writing"
 url = "/"
 [[params.menu]]
-name = "sketchbooks"
+name = "sketch"
 url = "/sketchbooks"
 [[params.menu]]
 name = "magnets"
@@ -45,9 +45,6 @@ url = "/gallery"
 [[params.menu]]
 name = "today"
 url = "/today"
-[[params.menu]]
-name = "map"
-url = "/map"
 [[params.menu]]
 name = "about"
 url = "/about"
