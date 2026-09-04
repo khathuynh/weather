@@ -17,11 +17,11 @@ hideHeader = false
 
 # Intro on main page
 homeIntroContent = """
-Weather forecasting for the soul <3.
+Welcome to my corner <3
 """
 
 # Collection to display on home
-homeCollectionTitle = 'Forecasts'
+homeCollectionTitle = 'Writing'
 homeCollection = 'posts'
 
 # Lists parameters
@@ -34,11 +34,11 @@ breadcrumbs = false
 
 # Main menu pages
 [[params.menu]]
-name = "home"
+name = "writing"
 url = "/"
 [[params.menu]]
-name = "about"
-url = "/about"
+name = "sketchbooks"
+url = "/sketchbooks"
 [[params.menu]]
 name = "magnets"
 url = "/gallery"
@@ -48,6 +48,9 @@ url = "/today"
 [[params.menu]]
 name = "map"
 url = "/map"
+[[params.menu]]
+name = "about"
+url = "/about"
 
 # Syntax highligth on code blocks
 [markup]
