@@ -1,4 +1,4 @@
 ---
-title: "Sketchbooks"
+title: "Los Angeles sketchbook"
 layout: "sketchbooks"
 ---

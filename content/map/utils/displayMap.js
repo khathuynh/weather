@@ -1,7 +1,7 @@
 var map = L.map('map').setView([42.3601, -71.0595], 12);
 map.setMaxBounds([
-    [42.44631602002316, -70.91989523904654],
-    [42.187134871022494, -71.20475356314114]
+    [42.54631602002316, -70.91989523904654],
+    [42.187134871022494, -71.30475356314114]
 ]);
 
 map.createPane("storyPane");
@@ -18,14 +18,14 @@ attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Ma
 }).addTo(map);
 
 // Overlay layers
-var liteCitiesLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png', {
+var liteCitiesLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png', {
 maxZoom: 16,
 minZoom: 11,
 maxNativeZoom: 15,
-opacity: .7,
+opacity: 1,
 className: 'lite-neighborhood-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-});
+}).addTo(map);
 
 var waterBaseLayer = L.geoJSON(waterFeatures, {
     interactive: false,
@@ -71,8 +71,8 @@ var harborLabel = L.marker([42.35223432675292, -71.0233620966038], {
 });
           
 var waterLayer = L.layerGroup([waterBaseLayer]);
-mysticLabel.addTo(waterLayer);
-charlesLabel.addTo(waterLayer);
+// mysticLabel.addTo(waterLayer);
+// charlesLabel.addTo(waterLayer);
 harborLabel.addTo(waterLayer);
 waterLayer.addTo(map);
 
@@ -102,7 +102,7 @@ var mbtaLinesLayer = L.geoJSON(mbtaArcsJson, {
     filter: function (feature) {
         return filterSilver(feature);
     }
-}).addTo(map);
+});
 
 var mbtaStationsNoDowntownLayer = L.geoJSON(mbtaNodesJson, {
     interactive: false,
@@ -164,17 +164,39 @@ var mbtaStationsDowntownOnlyLayer = L.geoJSON(mbtaNodesJson, {
     }
 });
 
-var bikeNetworkLayer = L.geoJSON(bikeNetworkArc, {
+var supBikeNetworkLayer = L.geoJSON(supBikeNetworkArc, {
+    interactive: false,
+    style: function(feature) {
+        return { 
+            weight: 2.5,
+            opacity: .9,
+            color: 'rgb(9, 74, 2)'
+            // dashArray: '2, 5'
+        }
+    }
+}).addTo(map);
+var sblBikeNetworkLayer = L.geoJSON(sblBikeNetworkArc, {
+    interactive: false,
+    style: function(feature) {
+        return { 
+            weight: 2.5,
+            opacity: .9,
+            color: 'rgb(98, 45, 232)',
+            dashArray: '2, 5'
+        }
+    }
+}).addTo(map);
+var blBikeNetworkLayer = L.geoJSON(blBikeNetworkArc, {
     interactive: false,
     style: function(feature) {
         return { 
             weight: 1.5,
             opacity: .9,
-            color: 'rgb(2, 64, 19)',
-            dashArray: '2, 5'
+            color: 'rgb(232, 57, 45)'
+            // dashArray: '2, 5'
         }
     }
-}).addTo(map);
+});
 
 var libraryLayer = L.geoJSON(libraryNode, {
     interactive: false, 
@@ -212,118 +234,6 @@ var boatLayer = L.geoJSON(boatNode, {
     }
 });
 
-var poiLayer = L.geoJSON(pointsOfInterestNode, {
-    interactive: false,
-    pointToLayer: function(point, latlng) {
-        var number = L.divIcon({
-            className: 'poi-names',
-            html: `<p>${point.properties.id}</p>`,
-            iconSize: [100, 20],
-            iconAnchor: [0, 12]
-        });
-        var numberMarker = L.marker([latlng.lat, latlng.lng], {
-            interactive: false,
-            pane: 'storyPane',
-            icon: number});
-        var pin = new L.icon({
-        iconUrl: './assets/red-pin.png',
-        iconSize: [60, 45],
-        iconAnchor: [30, 22]
-        });
-        var pinMarker = L.marker([latlng.lat, latlng.lng], {
-        interactive: false,
-        icon: pin
-        });
-
-        var hoverRadius = L.circleMarker([latlng.lat, latlng.lng],{
-            stroke: false,
-            pane: 'storyPane',
-            fillOpacity: 0,
-            fillColor:  'rgb(225, 255, 0)',
-            color: 'rgba(225, 255, 0, 0.28)',
-            radius: 25
-        });
-        hoverRadius.bindTooltip(point.properties.description, {
-            className: 'tooltip',
-            permanent: false,
-            direction: 'auto',
-            sticky: true
-            });
-        
-        hoverRadius.on('mouseover', function (e) {
-            this.setStyle({
-                fillOpacity: 0.32,
-                stroke: true
-            });
-            if (e.target._tooltip._content === '4am Terminus') {
-                document.getElementById('vignette-area').innerHTML = `In Massachusetts only thirty minutes from Alewife - I lay in my room, wondering why...`;
-            }
-        });
-        hoverRadius.on('mouseout', function (e) {
-            this.setStyle({
-            fillOpacity: 0,
-            stroke: false
-            });
-            document.getElementById('vignette-area').innerHTML = '';
-        });
-        // Fly to starting point
-        if (point.properties.id === "1") { 
-            hoverRadius.on('click', function(e) {
-                map.flyTo([42.40359921636448, -71.0856150144597], 14);
-            });
-        };
-
-        return L.layerGroup([numberMarker, pinMarker, hoverRadius], {pane: 'tooltipPane'});
-    }
-});
-
-var poiArcLayer = L.geoJSON(pointsOfInterestArc, {
-    interactive: false, 
-    style: function(feature) {
-        return { 
-            weight: 4,
-            opacity: .85,
-            color: 'rgb(255, 0, 115)',
-            dashArray: '5, 5'
-
-        }
-    }
-});
-
-var startHere = L.tooltip({ 
-    permanent: true,
-    direction: 'right',
-    className: 'start-here'
-
- })
-  .setContent("<- Start here.")
-  .setLatLng([42.415, -71.08]);
-
-var ameliaText = L.divIcon({
-    className: 'station-names',
-    html: `<p>Amelia's house</p>`,
-    iconSize: [100, 20],
-    iconAnchor: [0, 8]
-});
-var ameliaLabel = L.marker([42.424686648939506, -71.13112744907478], {
-    interactive: false,
-    icon: ameliaText
-});
-var ameliaHouse = L.circleMarker([42.424686648939506, -71.13112744907478], {
-    interactive: false,
-    color: 'rgb(0, 0, 0)',
-    fillColor:'rgb(111, 230, 90)',
-    fillOpacity: .85,
-    radius: 5,
-    weight: 1
-    }
-);
-
-var storyLayer = L.featureGroup([poiLayer, poiArcLayer, startHere]);
-storyLayer.addTo(map);
-
-var ameliaLayer = L.featureGroup([ ameliaHouse, ameliaLabel]);
-
 // Layer groups
 // var mbtaLayerGroup = L.layerGroup(mbtaStationsNoDowntownLayer, mbtaStationsDowntownOnlyLayer);
 
@@ -334,13 +244,14 @@ var baseMaps = {
 var overlayMaps = {
 'Cities + streets': liteCitiesLayer,
 'MBTA lines': mbtaLinesLayer,
-'Protected bike trails': bikeNetworkLayer,
+'Bike trails': supBikeNetworkLayer,
+'Separated bike lanes': sblBikeNetworkLayer,
+'Scary bike lanes': blBikeNetworkLayer,
 'Public boat launches': boatLayer,
 'Libraries': libraryLayer,
 'Water features': waterLayer,
 'Shoreline 1630 WIP': water1630Layer,
-'2.5D buildings (high zoom only)': osm,
-'Surprise': ameliaLayer
+'2.5D buildings (high zoom only)': osm
 }
 var layerControl = L.control.layers(baseMaps, overlayMaps, { hideSingleBase: true }).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
@@ -356,10 +267,6 @@ container.prepend(title);
 // Toggle station labels at various zoom levels
 map.on('zoomend', function() {
     toggleStationLabels();
-});
-
-map.on('overlayadd',function() {
-    storyLayer.bringToFront();
 });
 
 // When MBTA Lines layer removed, also remove station labels

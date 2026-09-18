@@ -1,7 +1,7 @@
 +++
 title = 'Brooklyn baby'
 date = 2025-01-11T14:20:31-04:00
-draft = false
+draft = true
 readTime = true
 summary = 'And so the best of 2024 lingers on into the new year. *Anora (2024)* leaves me with an intangible feeling, one that strikes an emotional core like no other feminist-adjacent media has done in recent memory. i feel something fundamentally true to the feminine condition in Mikey Madisons performance as Anora. and i cant unfeel it, despite the months that go by since seeing this movie...'
 +++

@@ -41,7 +41,9 @@ body {
 }
 
 .watercolor-layer { filter: hue-rotate(50deg); }
-.lite-neighborhood-layer { mix-blend-mode: multiply; } 
+.lite-neighborhood-layer { mix-blend-mode: multiply;
+    filter: invert(80%) contrast(300%);
+ } 
 
 image { image-rendering: crisp-edges; }
 
