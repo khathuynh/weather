@@ -169,7 +169,7 @@ var supBikeNetworkLayer = L.geoJSON(supBikeNetworkArc, {
     style: function(feature) {
         return { 
             className: 'bike-lines',
-            weight: 3,
+            weight: 2.5,
             opacity: .9,
             color: 'rgb(10, 73, 31)'
         }
@@ -181,7 +181,7 @@ var chillStreetsBikeLayer = L.geoJSON(chillStreetsArc, {
     style: function(feature) {
         return { 
             className: 'bike-lines',
-            weight: 3,
+            weight: 2.5,
             opacity: .9,
             color: 'rgb(3, 95, 34)'
         }
@@ -193,7 +193,7 @@ var tadScaryBikeLayer  = L.geoJSON(tadScaryStreetsArc, {
     style: function(feature) {
         return { 
             className: 'bike-lines',
-            weight: 3,
+            weight: 2.5,
             opacity: .9,
             color: 'rgb(224, 116, 0)'
         }
@@ -204,7 +204,7 @@ var scarySidewalkLayer = L.geoJSON(scaryStreetsSidewalkArc, {
     interactive: false,
     style: function(feature) {
         return { 
-            weight: 3,
+            weight: 2.5,
             opacity: .9,
             color: 'rgb(255, 48, 11)',
             dashArray: '2, 5'
