@@ -1,4 +1,4 @@
-var map = L.map('map').setView([42.3601, -71.0595], 12);
+var map = L.map('map').setView([42.409, -71.1062], 13);
 map.setMaxBounds([
     [42.54631602002316, -70.91989523904654],
     [42.187134871022494, -71.30475356314114]
@@ -12,7 +12,7 @@ var watercolorLayer = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_wat
 maxZoom: 16,
 minZoom: 11,
 maxNativeZoom: 14,
-opacity: .7,
+opacity: .8,
 className: 'watercolor-layer',
 attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
 }).addTo(map);
@@ -168,35 +168,49 @@ var supBikeNetworkLayer = L.geoJSON(supBikeNetworkArc, {
     interactive: false,
     style: function(feature) {
         return { 
-            weight: 2.5,
+            className: 'bike-lines',
+            weight: 3,
             opacity: .9,
-            color: 'rgb(9, 74, 2)'
-            // dashArray: '2, 5'
+            color: 'rgb(10, 73, 31)'
         }
     }
 }).addTo(map);
-var sblBikeNetworkLayer = L.geoJSON(sblBikeNetworkArc, {
+
+var chillStreetsBikeLayer = L.geoJSON(chillStreetsArc, {
     interactive: false,
     style: function(feature) {
         return { 
-            weight: 2.5,
+            className: 'bike-lines',
+            weight: 3,
             opacity: .9,
-            color: 'rgb(98, 45, 232)',
+            color: 'rgb(3, 95, 34)'
+        }
+    }
+}).addTo(map);
+
+var tadScaryBikeLayer  = L.geoJSON(tadScaryStreetsArc, {
+    interactive: false,
+    style: function(feature) {
+        return { 
+            className: 'bike-lines',
+            weight: 3,
+            opacity: .9,
+            color: 'rgb(224, 116, 0)'
+        }
+    }
+}).addTo(map);
+
+var scarySidewalkLayer = L.geoJSON(scaryStreetsSidewalkArc, {
+    interactive: false,
+    style: function(feature) {
+        return { 
+            weight: 3,
+            opacity: .9,
+            color: 'rgb(255, 48, 11)',
             dashArray: '2, 5'
         }
     }
 }).addTo(map);
-var blBikeNetworkLayer = L.geoJSON(blBikeNetworkArc, {
-    interactive: false,
-    style: function(feature) {
-        return { 
-            weight: 1.5,
-            opacity: .9,
-            color: 'rgb(232, 57, 45)'
-            // dashArray: '2, 5'
-        }
-    }
-});
 
 var libraryLayer = L.geoJSON(libraryNode, {
     interactive: false, 
@@ -240,20 +254,26 @@ var boatLayer = L.geoJSON(boatNode, {
 // Layer controls, scale configuration
 var baseMaps = {
 'Natural geography': watercolorLayer
-}
+};
 var overlayMaps = {
-'Cities + streets': liteCitiesLayer,
-'MBTA lines': mbtaLinesLayer,
-'Bike trails': supBikeNetworkLayer,
-'Separated bike lanes': sblBikeNetworkLayer,
-'Scary bike lanes': blBikeNetworkLayer,
-'Public boat launches': boatLayer,
-'Libraries': libraryLayer,
-'Water features': waterLayer,
-'Shoreline 1630 WIP': water1630Layer,
-'2.5D buildings (high zoom only)': osm
-}
-var layerControl = L.control.layers(baseMaps, overlayMaps, { hideSingleBase: true }).addTo(map);
+    'Bikability': {
+        'Bike trails': supBikeNetworkLayer,
+        'Chill streets': chillStreetsBikeLayer,
+        'Tad scary streets': tadScaryBikeLayer,
+        'Scary streets/sidewalk': scarySidewalkLayer
+    },
+    'Other': {
+        'Cities + streets': liteCitiesLayer,
+        'MBTA lines': mbtaLinesLayer,
+        'Public boat launches': boatLayer,
+        'Libraries': libraryLayer,
+        'Shoreline 1630 WIP': water1630Layer,
+        '2.5D buildings (high zoom only)': osm
+    }
+};
+var layerControl = L.control.groupedLayers(baseMaps, overlayMaps, { hideSingleBase: true }).addTo(map);
+
+// var layerControl = L.control.layers(baseMaps, overlayMaps, { hideSingleBase: true }).addTo(map);
 L.control.betterscale({maxWidth: 200, metric: false, isMobile: isMobile()}).addTo(map);
 
 var container = layerControl.getContainer();

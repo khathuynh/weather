@@ -1,7 +1,7 @@
 +++
 title = 'Sweet like sugar water'
 date = 2024-08-24T14:20:31-04:00
-draft = false
+draft = true
 readTime = true
 summary = 'I am sitting in a forest inside a botanic garden, where everything is in bloom. the last of summer lies ahead. today, the greenhouses were open to the public and all the flower beds seem to glisten, bathing in light and sugar water.  and then it occurs to me that late August captures the precise seasonality of the album (Maude Latours debut Sugar Water)....'
 +++

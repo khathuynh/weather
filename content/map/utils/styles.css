@@ -95,6 +95,10 @@ image { image-rendering: crisp-edges; }
 
 }
 
+.bike-lines {
+ filter: drop-shadow(4px 4px 6px rgba(255, 0, 212, 0.916));
+}
+
 .leaflet-tooltip.tooltip {
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
